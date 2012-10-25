@@ -1,0 +1,253 @@
+<!doctype html>
+%html
+  %head
+    %title Furnish
+    %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:charset => "UTF-8"}/
+    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "js/slides.jquery.js"}
+    %script{:src => "js/funcs.js"}
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if IE]
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %body
+    .bonus
+      %a{:href => "#"} Дополнительные бонусы для Вас и Ваших друзей
+      %button Подробнее
+      %a.close-a{:href => "#"}
+    %header
+      %nav.top-nav
+        .wrapper
+          %ul
+            %li
+              %a{:href => "#"} О проекте
+            %li
+              %a{:href => "#"} Вопросы и ответы
+            %li
+              %a{:href => "#"} Контакты
+            %li
+              %a{:href => "#"}
+                %img{:src => "images/content/like.png"}/
+          %ul
+            %li.bord-dot.basket
+              %a{:href => "#"}
+                %i
+                %span Корзина
+            %li
+              %a{:href => "#"} Регистрация
+            %li.bord-dot
+              %a{:href => "#"}
+                %span Вход на сайт
+            %li.soc-li.vk
+              %a{:href => "#"}
+            %li.soc-li.fb
+              %a{:href => "#"}
+            %li.soc-li.tw
+              %a{:href => "#"}
+      .wrapper
+        .main-head
+          .alleft
+            .search-box
+              %span Поиск по сайту:
+              %div
+                %input{:type => "text"}/
+                %button
+            %nav.dop-menu
+              %ul
+                %li
+                  %i
+                  %a{:href => "#"} Выберите дизайнера
+                %li
+                  %i
+                  %a{:href => "#"} Консьерж-сервис
+                %li
+                  %i
+                  %a{:href => "#"} Блог о дизайне
+          .alcenter
+            %img{:alt => "", :src => "images/content/logo.png"}/
+          .alright
+            .phone
+              %span> 495
+              333-93-40
+            .town
+              %span Ваш город:
+              .purple
+                %a{:href => "#"}
+                  %span Москва
+                %i.arrow-down
+                %ul
+                  %li
+                    %a.active{:href => "#"} Москва
+                  %li
+                    %a{:href => "#"} Санкт-Петербург
+                  %li
+                    %a{:href => "#"} Ростов
+                  %li
+                    %a{:href => "#"} Калининград
+        %nav.main-menu
+          %ul
+            %li.hidden-ul
+              %a{:href => "#"} Мебель и обстановка
+              %i.arrow-down
+              %ul.hide-ul{"data-left" => "15"}
+                %li
+                  %a{:href => "#"} Ссылка на раздел
+                %li
+                  %a{:href => "#"} Длинная ссылка на раздел
+                %li
+                  %a{:href => "#"} Ссылка на раздел
+                %li
+                  %a{:href => "#"} Ссылка на раздел три
+            %li
+              %a{:href => "#"} декор и аксессуары
+            %li
+              %a{:href => "#"} товары для детской
+            %li
+              %a{:href => "#"} здоровый образ жизни
+            %li
+              %a{:href => "#"} подарки для дома
+            %li
+              %a{:href => "#"} дизайнерские вещи
+            %li
+              %a{:href => "#"} sale
+    .wrapper
+      .main-cont
+        %section#slides.slide-box
+          .slides_container
+            .slide
+              %a{:href => "#"}
+                %img{:alt => "Slide 1", :src => "images/content/slide1.jpg"}/
+              .caption{:style => "bottom:0"}
+                %h3 Антикварная мебель
+                %p
+                  Есть одна простая истина, что в нашей вселенной любое явление
+                  всегда основывается на определенных законах. И это правда.
+            .slide
+              %a{:href => "#"}
+                %img{:alt => "Slide 2", :src => "images/content/slide1.jpg"}/
+              .caption
+                %p Taxi
+            .slide
+              %a{:href => "#"}
+                %img{:alt => "Slide 3", :src => "images/content/slide1.jpg"}/
+              .caption
+                %p Happy Bokeh raining Day
+            .slide
+              %a{:href => "#"}
+                %img{:alt => "Slide 4", :src => "images/content/slide1.jpg"}/
+              .caption
+                %p We Eat Light
+        %aside
+          %section.base-info
+            %img{:src => "images/content/im1.jpg"}/
+            %h3
+              %a{:href => "#"} Истории вещей
+            %p Диза?йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
+            %a.add-a{:href => "#"}
+          %section.base-info
+            %img{:src => "images/content/im2.jpg"}/
+            %h3
+              %a{:href => "#"} Разговор с дизайнером
+            %p Диза?йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
+            %a.add-a{:href => "#"}
+      .nice-img
+        %div
+          %section.base-info
+            %img{:alt => "", :src => "images/content/b1.jpg"}/
+            %a{:href => "#"} Эклектика
+          %section.base-info
+            %img{:alt => "", :src => "images/content/b4.jpg"}/
+            %a{:href => "#"} Ар-деко
+        %div
+          %section.base-info
+            %img{:alt => "", :src => "images/content/b2.jpg"}/
+            %a{:href => "#"} Англия и Америка
+          %section.base-info
+            %img{:alt => "", :src => "images/content/b5.jpg"}/
+            %a{:href => "#"} Восточные акценты
+        %div
+          %section.base-info
+            %img{:alt => "", :src => "images/content/b3.jpg"}/
+            %a{:href => "#"} Современность
+          %section.base-info
+            %img{:alt => "", :src => "images/content/b6.jpg"}/
+            %a{:href => "#"} Детские вещи
+      %nav.bottom-menu
+        %ul
+          %li
+            %i.dott-li
+            %a{:href => "#"} Ар-деко
+          %li
+            %i.dott-li
+            %a{:href => "#"} Восточные акценты
+          %li
+            %i.dott-li
+            %a{:href => "#"} Детские вещи
+          %li
+            %i.dott-li
+            %a{:href => "#"} еще
+      .bottom-block
+        %h3 Записи в блоге
+        %a{:href => "#"} Все записи
+        .bottom-block-cont{"data-mmn" => "76"}
+          .big-box
+            %section.base-info
+              %img{:src => "images/content/im2.jpg"}/
+              %h3
+                %a{:href => "#"} Длинный заголовок первой важной записи в блоге
+              %p Диза?йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.ние формальных качеств промышленных изделий.
+              %p
+                Диза?йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.ние формальных качеств промышленных изделий.
+                %a{:href => "#"} Читать дальше
+          .small-box
+            %section.base-info
+              %img{:alt => "", :src => "images/content/im2.jpg"}/
+              %h3
+                %a{:href => "#"} заголовок покороче
+              %p Диза?йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
+          .small-box
+            %section.base-info
+              %img{:alt => "", :src => "images/content/im2.jpg"}/
+              %h3
+                %a{:href => "#"} еще один заголовок покороче
+              %p Диза?йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
+    %footer
+      .wrapper
+        %nav.foot-left
+          %ul
+            %li
+              %a{:href => "#"} Пользовательское соглашение
+            %li
+              %a{:href => "#"} Доставка и оплата
+            %li
+              %a{:href => "#"} Возврат и обмен товара
+        %div © 2012 The Furnish
+        %nav.foot-right
+          %ul
+            %li
+              %a{:href => "#"} Поставщикам
+            %li
+              %a{:href => "#"} Дизайнерам
+    .popup-form
+      .reg-form
+        .head-form
+          %h3 Регистрация
+        .form-field
+          %span Email*
+          %input{:type => "text", :value => ""}/
+        .form-field
+          %span Пароль*
+          %input{:type => "text", :value => ""}/
+        .form-field
+          %span Повторите пароль*
+          %input{:type => "text", :value => ""}/
+        .footer-form
+          %div
+            %input#i2{:type => "checkbox"}/
+            %label{:for => "i2"}
+              Я прочитал и принимаю
+              %br/
+              %a{:href => "#"} пользовательское соглашение
+          %button Регистрация
+    .overlay

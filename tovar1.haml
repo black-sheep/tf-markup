@@ -1,0 +1,446 @@
+<!doctype html>
+%html
+  %head
+    %title Furnish
+    %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:charset => "UTF-8"}/
+    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "js/slides.jquery.js"}
+    %script{:src => "js/funcs.js"}
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if IE]
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %body
+    .bonus
+      %a{:href => "#"} Дополнительные бонусы для Вас и Ваших друзей
+      %button Подробнее
+      %a.close-a{:href => "#"}
+    %header
+      %nav.top-nav
+        .wrapper
+          %ul
+            %li
+              %a{:href => "#"} О проекте
+            %li
+              %a{:href => "#"} Вопросы и ответы
+            %li
+              %a{:href => "#"} Контакты
+            %li
+              %a{:href => "#"}
+                %img{:src => "images/content/like.png"}/
+          %ul
+            %li
+              %a{:href => "#"} Выход
+            %li.bord-dot.basket
+              %a{:href => "#"}
+                %i
+                %span Корзина
+            %li.setting.active
+              %a{:href => "#"}
+            %li
+              Ваши баллы:
+              %span 2 600
+            %li.bord-dot.user-kab.active
+              %a{:href => "#"}
+                %i
+                %span Личный кабинет
+            %li.soc-li.vk
+              %a{:href => "#"}
+            %li.soc-li.fb
+              %a{:href => "#"}
+            %li.soc-li.tw
+              %a{:href => "#"}
+      .wrapper
+        .main-head
+          .alleft
+            .search-box
+              %span Поиск по сайту:
+              %div
+                %input{:type => "text"}/
+                %button
+            %nav.dop-menu
+              %ul
+                %li
+                  %i
+                  %a{:href => "#"} Выберите дизайнера
+                %li
+                  %i
+                  %a{:href => "#"} Консьерж-сервис
+                %li
+                  %i
+                  %a{:href => "#"} Блог о дизайне
+          .alcenter
+            %img{:alt => "", :src => "images/content/logo.png"}/
+          .alright
+            .phone
+              %span> 495
+              333-93-40
+            .town
+              %span Ваш город:
+              .purple
+                %a{:href => "#"}
+                  %span Москва
+                %i.arrow-down
+                %ul
+                  %li
+                    %a.active{:href => "#"} Москва
+                  %li
+                    %a{:href => "#"} Санкт-Петербург
+                  %li
+                    %a{:href => "#"} Ростов
+                  %li
+                    %a{:href => "#"} Калининград
+        %nav.main-menu
+          %ul
+            %li.hidden-ul
+              %a{:href => "#"} Мебель и обстановка
+              %i.arrow-down
+              %ul.hide-ul{"data-left" => "41"}
+                %li
+                  %h4 Мебель
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Диваны
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла
+                    %li
+                      %i
+                      %a{:href => "#"} Кровати
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                    %li
+                      %i
+                      %a{:href => "#"} Шкафы и комоды
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Стулья
+                %li
+                  %h4 Мебельные аксессуары
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Журнальные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Этажерки
+                    %li
+                      %i
+                      %a{:href => "#"} Стеллажи и полки
+                    %li
+                      %i
+                      %a{:href => "#"} Ширмы
+                    %li
+                      %i
+                      %a{:href => "#"} Вешалки для прихожей
+                    %li
+                      %i
+                      %a{:href => "#"} Сервировочные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Газетницы
+                %li
+                  %h4 Мебель для кабинетов
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла и стулья
+                    %li
+                      %i
+                      %a{:href => "#"} Системы хранения (шкафы, полки)
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                %li
+                  %h4 Свет
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Напольные светильники
+                    %li
+                      %i
+                      %a{:href => "#"} Настольные светильники
+            %li
+              %a{:href => "#"} декор и аксессуары
+            %li
+              %a{:href => "#"} товары для детской
+            %li
+              %a{:href => "#"} здоровый образ жизни
+            %li
+              %a{:href => "#"} подарки для дома
+            %li
+              %a{:href => "#"} дизайнерские вещи
+            %li
+              %a{:href => "#"} sale
+        .crump
+          %ul
+            %li
+              %a{:href => "#"} Главная
+              %i
+            %li
+              %a{:href => "#"} Личный кабинет
+              %i
+            %li
+              %a{:href => "#"} Добавить товар
+    .wrapper
+      .gray-cont
+        %h1 Добавить новый товар
+        %div
+          .left-select
+            .box-sel
+              %span.name-op Раздел
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Тип
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Фабрика производитель
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Бренд
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Страна производитель
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Стиль
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Наименование
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+          .center-opisanie
+            %span.name-op Описание товара:
+            %form
+              %div
+                %ul
+                  %li.vern
+                    %a{:href => "#"}
+                  %li.i-bold
+                    %a{:href => "#"}
+                  %li.i-ital
+                    %a{:href => "#"}
+                  %li.i-list
+                    %a{:href => "#"}
+                  %li.i-link
+                    %a{:href => "#"}
+                  %li.i-img
+                    %a{:href => "#"}
+                  %li.i-mov
+                    %a{:href => "#"}
+              %textarea
+            .load-file
+              %span.name-op Загрузить фотографии
+              %div
+                %input{:type => "text"}/
+                %button Обзор
+                %button.blue-btn Загрузить
+            %div
+              .prev-box
+                .img-frame
+                  %img{:alt => "", :src => "images/content/p1.jpg"}/
+                  .del-img
+                %div
+                  %input#r1{:type => "radio"}/
+                  %label{:for => "r1"} Сделать главным
+              .prev-box
+                .img-frame
+                  %img{:alt => "", :src => "images/content/p2.jpg"}/
+                  .del-img
+                %div
+                  %input#r2{:type => "radio"}/
+                  %label{:for => "r2"} Сделать главным
+              .prev-box
+                .img-frame
+                  %img{:alt => "", :src => "images/content/p3.jpg"}/
+                  .del-img
+                %div
+                  %input#r3{:type => "radio"}/
+                  %label{:for => "r3"} Сделать главным
+          .right-comm
+            %span.name-op Комментарий администратору:
+            %textarea
+        .col-btn
+          .left-select
+            %h3 ДОбавить вариант
+          .center-opisanie
+            %button.red-btn Удалить объект
+            %button.blue-btn Восстановить
+          .right-comm
+        .add-var
+          .material
+            .default
+              %input#r4{:type => "radio"}/
+              %label{:for => "r4"} Сделать вариантом по умолчанию
+            .box-sel
+              %span.name-op Название материала
+              %input{:type => "text"}/
+            .box-sel
+              %span.name-op Материал
+              %input{:type => "text"}/
+          .artikul
+            .box-sel
+              %span.name-op Артикул
+              %input{:type => "text"}/
+            .box-sel
+              .add-b
+                %input#ch1{:type => "checkbox"}/
+                %label.name-op{:for => "ch1"} Добавить бейдж
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            %div
+              .col-vo.box-sel
+                %span.name-op Количество
+                %input{:type => "text"}/
+              .date-p.box-sel
+                %span.name-op Дата поступления
+                %input{:type => "text"}/
+          .parametr
+            .box-sel
+              %span.name-op Длина
+              %input{:type => "text"}/
+            .box-sel
+              %span.name-op Ширина
+              %input{:type => "text"}/
+            .box-sel
+              %span.name-op Высота
+              %input{:type => "text"}/
+          .price
+            .box-sel
+              %span.name-op Цена старая
+              %input{:type => "text"}/
+            .box-sel
+              %span.name-op Цена новая
+              %input{:type => "text"}/
+            .box-sel
+              %span.name-op Рекомендованная цена
+              %input{:type => "text"}/
+          .color
+            %span.name-op Цвета
+            %ul
+              %li.c1
+                %a{:href => "#"}
+              %li.c2
+                %a{:href => "#"}
+              %li.c3
+                %a{:href => "#"}
+              %li.c4
+                %a{:href => "#"}
+              %li.c5
+                %a{:href => "#"}
+              %li.c6
+                %a{:href => "#"}
+              %li.c7
+                %a{:href => "#"}
+              %li.c8
+                %a{:href => "#"}
+              %li.c9
+                %a{:href => "#"}
+              %li.c10
+                %a{:href => "#"}
+              %li.c11
+                %a{:href => "#"}
+              %li.c12
+                %a{:href => "#"}
+              %li.c13
+                %a{:href => "#"}
+        .load-file
+          %span.name-op Загрузить фотографии в разных ракурсах
+          %div
+            %input{:type => "text"}/
+            %button Обзор
+            %button.blue-btn Загрузить
+        %div
+          .prev-box
+            .img-frame
+              %img{:alt => "", :src => "images/content/p1.jpg"}/
+              .del-img
+            %div
+              %input#r5{:type => "radio"}/
+              %label{:for => "r5"} Сделать главным
+          .prev-box
+            .img-frame
+              %img{:alt => "", :src => "images/content/p2.jpg"}/
+              .del-img
+            %div
+              %input#r6{:type => "radio"}/
+              %label{:for => "r6"} Сделать главным
+          .prev-box
+            .img-frame
+              %img{:alt => "", :src => "images/content/p3.jpg"}/
+              .del-img
+            %div
+              %input#r7{:type => "radio"}/
+              %label{:for => "r7"} Сделать главным
+        .col-btn
+          .left-select
+            %button Добавить вариант
+          .center-opisanie
+            %button.red-btn Удалить объект
+            %button.blue-btn Восстановить
+          .right-comm
+            %button.blue-btn Сохранить
+    %footer
+      .wrapper
+        %nav.foot-left
+          %ul
+            %li
+              %a{:href => "#"} Пользовательское соглашение
+            %li
+              %a{:href => "#"} Доставка и оплата
+            %li
+              %a{:href => "#"} Возврат и обмен товара
+        %div © 2012 The Furnish
+        %nav.foot-right
+          %ul
+            %li
+              %a{:href => "#"} Поставщикам
+            %li
+              %a{:href => "#"} Дизайнерам

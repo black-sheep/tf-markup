@@ -36,12 +36,12 @@
               %a{:href => "#"}
                 %i
                 %span Корзина
-            %li.setting
+            %li.setting.active
               %a{:href => "#"}
             %li
               Ваши баллы:
               %span 2 600
-            %li.bord-dot.user-kab
+            %li.bord-dot.user-kab.active
               %a{:href => "#"}
                 %i
                 %span Личный кабинет
@@ -181,121 +181,16 @@
               %a{:href => "#"} дизайнерские вещи
             %li
               %a{:href => "#"} sale
+        .crump
+          %ul
+            %li
+              %a{:href => "#"} Главная
+              %i
+            %li
+              %a{:href => "#"} Восстановление пароля
     .wrapper
-      .main-cont
-        %section#slides.slide-box
-          .slides_container
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 1", :src => "images/content/slide1.jpg"}/
-              .caption{:style => "bottom:0"}
-                %h3 Антикварная мебель
-                %p
-                  Есть одна простая истина, что в нашей вселенной любое явление
-                  всегда основывается на определенных законах. И это правда.
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 2", :src => "images/content/slide1.jpg"}/
-              .caption
-                %p Taxi
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 3", :src => "images/content/slide1.jpg"}/
-              .caption
-                %p Happy Bokeh raining Day
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 4", :src => "images/content/slide1.jpg"}/
-              .caption
-                %p We Eat Light
-        %aside
-          %section.base-info
-            %img{:src => "images/content/im1.jpg"}/
-            %h3
-              %a{:href => "#"} Истории вещей
-            %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-            %a.add-a{:href => "#"}
-          %section.base-info
-            %img{:src => "images/content/im2.jpg"}/
-            %h3
-              %a{:href => "#"} Разговор с дизайнером
-            %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-            %a.add-a{:href => "#"}
-      .nice-img
+      .recovery
+        %span Ваш Email
+        %input{:type => "text"}/
         %div
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b1.jpg"}/
-            %a{:href => "#"} Эклектика
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b4.jpg"}/
-            %a{:href => "#"} Ар-деко
-        %div
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b2.jpg"}/
-            %a{:href => "#"} Англия и Америка
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b5.jpg"}/
-            %a{:href => "#"} Восточные акценты
-        %div
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b3.jpg"}/
-            %a{:href => "#"} Современность
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b6.jpg"}/
-            %a{:href => "#"} Детские вещи
-      %nav.bottom-menu
-        %ul
-          %li
-            %i.dott-li
-            %a{:href => "#"} Ар-деко
-          %li
-            %i.dott-li
-            %a{:href => "#"} Восточные акценты
-          %li
-            %i.dott-li
-            %a{:href => "#"} Детские вещи
-          %li
-            %i.dott-li
-            %a{:href => "#"} еще
-      .bottom-block
-        %h3 Записи в блоге
-        %a{:href => "#"} Все записи
-        .bottom-block-cont{"data-mmn" => "76"}
-          .big-box
-            %section.base-info
-              %img{:src => "images/content/im2.jpg"}/
-              %h3
-                %a{:href => "#"} Длинный заголовок первой важной записи в блоге
-              %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.ние формальных качеств промышленных изделий.
-              %p
-                Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.ние формальных качеств промышленных изделий.
-                %a{:href => "#"} Читать дальше
-          .small-box
-            %section.base-info
-              %img{:alt => "", :src => "images/content/im2.jpg"}/
-              %h3
-                %a{:href => "#"} заголовок покороче
-              %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-          .small-box
-            %section.base-info
-              %img{:alt => "", :src => "images/content/im2.jpg"}/
-              %h3
-                %a{:href => "#"} еще один заголовок покороче
-              %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-    %footer
-      .wrapper
-        %nav.foot-left
-          %ul
-            %li
-              %a{:href => "#"} Пользовательское соглашение
-            %li
-              %a{:href => "#"} Доставка и оплата
-            %li
-              %a{:href => "#"} Возврат и обмен товара
-        %div © 2012 The Furnish
-        %nav.foot-right
-          %ul
-            %li
-              %a{:href => "#"} Поставщикам
-            %li
-              %a{:href => "#"} Дизайнерам
+          %button Восстановить пароль

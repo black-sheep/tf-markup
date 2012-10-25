@@ -1,0 +1,39 @@
+<!doctype html>
+%html
+  %head
+    %title Furnish
+    %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:charset => "UTF-8"}/
+    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "js/slides.jquery.js"}
+    %script{:src => "js/funcs.js"}
+    %script{:src => "js/placeholder.js"}
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if IE]
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %body
+    .wrapper
+      .alcenter.zagl-cont
+        %img{:alt => "", :src => "images/content/logo.png"}/
+        %div
+          %span.large-board
+        %h1 Магазин современной мебели
+        %div
+          Это могла быть работа, но что-то не похоже на нее.
+          %br/
+          Все из-за удобного стула, мебели для организации рабочего места
+          %br/
+          и правильного освещения. И вам становится проще справляться с тем,
+          %br/
+          что нужно сделать и появляется время на то, что вы хотите сделать.
+        %form.news
+          %span
+            узнай об открытии
+            %br>/
+            первым
+          .inps
+            %label.overlabel{:for => "input-text"} Email
+            %input#input-text{:title => "Email", :type => "text", :value => ""}/
+          %div
+            %button Жду новостей!

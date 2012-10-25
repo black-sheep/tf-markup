@@ -30,21 +30,15 @@
               %a{:href => "#"}
                 %img{:src => "images/content/like.png"}/
           %ul
-            %li
-              %a{:href => "#"} Выход
             %li.bord-dot.basket
               %a{:href => "#"}
                 %i
                 %span Корзина
-            %li.setting
-              %a{:href => "#"}
             %li
-              Ваши баллы:
-              %span 2 600
-            %li.bord-dot.user-kab
+              %a{:href => "#"} Регистрация
+            %li.bord-dot
               %a{:href => "#"}
-                %i
-                %span Личный кабинет
+                %span Вход на сайт
             %li.soc-li.vk
               %a{:href => "#"}
             %li.soc-li.fb
@@ -96,79 +90,15 @@
             %li.hidden-ul
               %a{:href => "#"} Мебель и обстановка
               %i.arrow-down
-              %ul.hide-ul{"data-left" => "41"}
+              %ul.hide-ul{"data-left" => "15"}
                 %li
-                  %h4 Мебель
-                  %ul
-                    %li
-                      %i
-                      %a{:href => "#"} Диваны
-                    %li
-                      %i
-                      %a{:href => "#"} Кресла
-                    %li
-                      %i
-                      %a{:href => "#"} Кровати
-                    %li
-                      %i
-                      %a{:href => "#"} Тумбочки
-                    %li
-                      %i
-                      %a{:href => "#"} Шкафы и комоды
-                    %li
-                      %i
-                      %a{:href => "#"} Столы
-                    %li
-                      %i
-                      %a{:href => "#"} Стулья
+                  %a{:href => "#"} Ссылка на раздел
                 %li
-                  %h4 Мебельные аксессуары
-                  %ul
-                    %li
-                      %i
-                      %a{:href => "#"} Журнальные столики
-                    %li
-                      %i
-                      %a{:href => "#"} Этажерки
-                    %li
-                      %i
-                      %a{:href => "#"} Стеллажи и полки
-                    %li
-                      %i
-                      %a{:href => "#"} Ширмы
-                    %li
-                      %i
-                      %a{:href => "#"} Вешалки для прихожей
-                    %li
-                      %i
-                      %a{:href => "#"} Сервировочные столики
-                    %li
-                      %i
-                      %a{:href => "#"} Газетницы
+                  %a{:href => "#"} Длинная ссылка на раздел
                 %li
-                  %h4 Мебель для кабинетов
-                  %ul
-                    %li
-                      %i
-                      %a{:href => "#"} Столы
-                    %li
-                      %i
-                      %a{:href => "#"} Кресла и стулья
-                    %li
-                      %i
-                      %a{:href => "#"} Системы хранения (шкафы, полки)
-                    %li
-                      %i
-                      %a{:href => "#"} Тумбочки
+                  %a{:href => "#"} Ссылка на раздел
                 %li
-                  %h4 Свет
-                  %ul
-                    %li
-                      %i
-                      %a{:href => "#"} Напольные светильники
-                    %li
-                      %i
-                      %a{:href => "#"} Настольные светильники
+                  %a{:href => "#"} Ссылка на раздел три
             %li
               %a{:href => "#"} декор и аксессуары
             %li
@@ -299,3 +229,21 @@
               %a{:href => "#"} Поставщикам
             %li
               %a{:href => "#"} Дизайнерам
+    .popup-form
+      .enter-form
+        .head-form
+          %h3 Вход на сайт
+          %a{:href => "#"}
+            %img{:alt => "", :src => "images/content/soc.jpg"}/
+        .form-field
+          %span Email
+          %input{:type => "text", :value => ""}/
+        .form-field
+          %span Пароль
+          %input{:type => "text", :value => ""}/
+        .footer-form
+          %div
+            %input#i1{:type => "checkbox"}/
+            %label{:for => "i1"} Запомнить меня
+          %button Войти
+    .overlay  

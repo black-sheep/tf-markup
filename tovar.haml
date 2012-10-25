@@ -36,12 +36,12 @@
               %a{:href => "#"}
                 %i
                 %span Корзина
-            %li.setting
+            %li.setting.active
               %a{:href => "#"}
             %li
               Ваши баллы:
               %span 2 600
-            %li.bord-dot.user-kab
+            %li.bord-dot.user-kab.active
               %a{:href => "#"}
                 %i
                 %span Личный кабинет
@@ -181,107 +181,136 @@
               %a{:href => "#"} дизайнерские вещи
             %li
               %a{:href => "#"} sale
+        .crump
+          %ul
+            %li
+              %a{:href => "#"} Главная
+              %i
+            %li
+              %a{:href => "#"} Личный кабинет
+              %i
+            %li
+              %a{:href => "#"} Добавить товар
     .wrapper
-      .main-cont
-        %section#slides.slide-box
-          .slides_container
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 1", :src => "images/content/slide1.jpg"}/
-              .caption{:style => "bottom:0"}
-                %h3 Антикварная мебель
-                %p
-                  Есть одна простая истина, что в нашей вселенной любое явление
-                  всегда основывается на определенных законах. И это правда.
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 2", :src => "images/content/slide1.jpg"}/
-              .caption
-                %p Taxi
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 3", :src => "images/content/slide1.jpg"}/
-              .caption
-                %p Happy Bokeh raining Day
-            .slide
-              %a{:href => "#"}
-                %img{:alt => "Slide 4", :src => "images/content/slide1.jpg"}/
-              .caption
-                %p We Eat Light
-        %aside
-          %section.base-info
-            %img{:src => "images/content/im1.jpg"}/
-            %h3
-              %a{:href => "#"} Истории вещей
-            %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-            %a.add-a{:href => "#"}
-          %section.base-info
-            %img{:src => "images/content/im2.jpg"}/
-            %h3
-              %a{:href => "#"} Разговор с дизайнером
-            %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-            %a.add-a{:href => "#"}
-      .nice-img
+      .gray-cont
+        %h1 Добавить новый товар
         %div
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b1.jpg"}/
-            %a{:href => "#"} Эклектика
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b4.jpg"}/
-            %a{:href => "#"} Ар-деко
-        %div
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b2.jpg"}/
-            %a{:href => "#"} Англия и Америка
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b5.jpg"}/
-            %a{:href => "#"} Восточные акценты
-        %div
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b3.jpg"}/
-            %a{:href => "#"} Современность
-          %section.base-info
-            %img{:alt => "", :src => "images/content/b6.jpg"}/
-            %a{:href => "#"} Детские вещи
-      %nav.bottom-menu
-        %ul
-          %li
-            %i.dott-li
-            %a{:href => "#"} Ар-деко
-          %li
-            %i.dott-li
-            %a{:href => "#"} Восточные акценты
-          %li
-            %i.dott-li
-            %a{:href => "#"} Детские вещи
-          %li
-            %i.dott-li
-            %a{:href => "#"} еще
-      .bottom-block
-        %h3 Записи в блоге
-        %a{:href => "#"} Все записи
-        .bottom-block-cont{"data-mmn" => "76"}
-          .big-box
-            %section.base-info
-              %img{:src => "images/content/im2.jpg"}/
-              %h3
-                %a{:href => "#"} Длинный заголовок первой важной записи в блоге
-              %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.ние формальных качеств промышленных изделий.
-              %p
-                Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.ние формальных качеств промышленных изделий.
-                %a{:href => "#"} Читать дальше
-          .small-box
-            %section.base-info
-              %img{:alt => "", :src => "images/content/im2.jpg"}/
-              %h3
-                %a{:href => "#"} заголовок покороче
-              %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
-          .small-box
-            %section.base-info
-              %img{:alt => "", :src => "images/content/im2.jpg"}/
-              %h3
-                %a{:href => "#"} еще один заголовок покороче
-              %p Диза́йн — творческая деятельность, целью которой является определение формальных качеств промышленных изделий.
+          .left-select
+            .box-sel
+              %span.name-op Раздел
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Тип
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Фабрика производитель
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Бренд
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Страна производитель
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Стиль
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+            .box-sel
+              %span.name-op Наименование
+              %select
+                %option 1
+                %option 2
+                %option 3
+                %option 4
+                %option 5
+          .center-opisanie
+            %span.name-op Описание товара:
+            %form
+              %div
+                %ul
+                  %li.vern
+                    %a{:href => "#"}
+                  %li.i-bold
+                    %a{:href => "#"}
+                  %li.i-ital
+                    %a{:href => "#"}
+                  %li.i-list
+                    %a{:href => "#"}
+                  %li.i-link
+                    %a{:href => "#"}
+                  %li.i-img
+                    %a{:href => "#"}
+                  %li.i-mov
+                    %a{:href => "#"}
+              %textarea
+            .load-file
+              %span.name-op Загрузить фотографии
+              %div
+                %input{:type => "text"}/
+                %button Обзор
+                %button.blue-btn Загрузить
+            %div
+              .prev-box
+                .img-frame
+                  %img{:alt => "", :src => "images/content/p1.jpg"}/
+                  .del-img
+                %div
+                  %input#r1{:type => "radio"}/
+                  %label{:for => "r1"} Сделать главным
+              .prev-box
+                .img-frame
+                  %img{:alt => "", :src => "images/content/p2.jpg"}/
+                  .del-img
+                %div
+                  %input#r2{:type => "radio"}/
+                  %label{:for => "r2"} Сделать главным
+              .prev-box
+                .img-frame
+                  %img{:alt => "", :src => "images/content/p3.jpg"}/
+                  .del-img
+                %div
+                  %input#r3{:type => "radio"}/
+                  %label{:for => "r3"} Сделать главным
+          .right-comm
+            %span.name-op Комментарий администратору:
+            %textarea
+        .col-btn
+          .left-select
+            %button Добавить вариант
+          .center-opisanie
+            %button.red-btn Удалить объект
+            %button.blue-btn Восстановить
+          .right-comm
+            %button.blue-btn Сохранить
     %footer
       .wrapper
         %nav.foot-left
