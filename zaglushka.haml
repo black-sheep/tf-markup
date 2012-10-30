@@ -4,36 +4,43 @@
     %title Furnish
     %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
     %meta{:charset => "UTF-8"}/
-    %script{:src => "js/jquery-1.7.1.min.js"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"}
+    :javascript
+      !window.jQuery && document.write(unescape('%3Cscript src="jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))    %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+    :javascript
+      !window.jQuery.ui && document.write(unescape('%3Cscript src="jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))    %script{:src => "js/jquery.mousewheel.min.js"}
     %script{:src => "js/slides.jquery.js"}
     %script{:src => "js/funcs.js"}
-    %script{:src => "js/placeholder.js"}
+    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/jquery.mCustomScrollbar.js"}
+    %script{:src => "js/jcarousel.js", :type => "text/javascript"}
+    %script{:src => "js/placeholder.js", :type => "text/javascript"}
     /[if lt IE 9]
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     /[if IE]
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  %body
+  %body{"data-ws" => "1065"}
     .wrapper
       .alcenter.zagl-cont
         %img{:alt => "", :src => "images/content/logo.png"}/
         %div
           %span.large-board
-        %h1 Магазин современной мебели
+        %h1 РњР°РіР°Р·РёРЅ СЃРѕРІСЂРµРјРµРЅРЅРѕР№ РјРµР±РµР»Рё
         %div
-          Это могла быть работа, но что-то не похоже на нее.
+          Р­С‚Рѕ РјРѕРіР»Р° Р±С‹С‚СЊ СЂР°Р±РѕС‚Р°, РЅРѕ С‡С‚Рѕ-С‚Рѕ РЅРµ РїРѕС…РѕР¶Рµ РЅР° РЅРµРµ.
           %br/
-          Все из-за удобного стула, мебели для организации рабочего места
+          Р’СЃРµ РёР·-Р·Р° СѓРґРѕР±РЅРѕРіРѕ СЃС‚СѓР»Р°, РјРµР±РµР»Рё РґР»СЏ РѕСЂРіР°РЅРёР·Р°С†РёРё СЂР°Р±РѕС‡РµРіРѕ РјРµСЃС‚Р°
           %br/
-          и правильного освещения. И вам становится проще справляться с тем,
+          Рё РїСЂР°РІРёР»СЊРЅРѕРіРѕ РѕСЃРІРµС‰РµРЅРёСЏ. Р РІР°Рј СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РїСЂРѕС‰Рµ СЃРїСЂР°РІР»СЏС‚СЊСЃСЏ СЃ С‚РµРј,
           %br/
-          что нужно сделать и появляется время на то, что вы хотите сделать.
+          С‡С‚Рѕ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ Рё РїРѕСЏРІР»СЏРµС‚СЃСЏ РІСЂРµРјСЏ РЅР° С‚Рѕ, С‡С‚Рѕ РІС‹ С…РѕС‚РёС‚Рµ СЃРґРµР»Р°С‚СЊ.
         %form.news
           %span
-            узнай об открытии
+            СѓР·РЅР°Р№ РѕР± РѕС‚РєСЂС‹С‚РёРё
             %br>/
-            первым
+            РїРµСЂРІС‹Рј
           .inps
             %label.overlabel{:for => "input-text"} Email
             %input#input-text{:title => "Email", :type => "text", :value => ""}/
           %div
-            %button Жду новостей!
+            %button Р–РґСѓ РЅРѕРІРѕСЃС‚РµР№!

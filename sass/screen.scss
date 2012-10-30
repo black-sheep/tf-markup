@@ -83,6 +83,15 @@ $light-purple: #814ca9;
     padding-bottom: 20px;
     border-bottom: 2px solid #231f20;
 }
+@mixin small-button {
+  height: 23px;
+  color: $wh-bord;
+  font-size: $main-fs + 1;
+  background-position: 0 -421px;
+  background-repeat: repeat-x;
+  border: 1px solid #4b3d7c;
+  @include border-radius(4px);
+}
 @mixin medium-button {
     height: 33px;
     color: $wh-bord;
@@ -177,7 +186,48 @@ $light-purple: #814ca9;
     }
   }
 }
-
+@mixin small-slide-li {
+  margin-left: 0;
+  padding: 4px;
+  border: 1px solid $light-gray;
+  margin-right: 15px;
+  width: 109px;
+  height: 69px;
+}
+@mixin big-slide-li {
+  border: none !important;
+  width: 179px;
+  height: auto;
+  margin-right: 29px !important;
+  padding: 0 !important;
+  span {
+    border: 1px solid $light-gray;
+    padding: 4px;
+    width: 169px;
+    height: 109px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 17px;
+  }
+  a {
+    font-size: $main-fs + 2;
+    line-height: 18px;
+  }
+  span.price {
+    margin-top: 16px;
+    border: none;
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-size: $main-fs + 7;
+    color: $main-color;
+    font-family: $font-arial;
+    font-weight: bold;
+  }
+}
 .alleft { text-align: left; }
 .alcenter { text-align: center; }
 .alright { text-align: right; }
@@ -196,9 +246,14 @@ body { background: #fff; font-family: Arial, sans-serif;
 }
 a:hover, a:hover span { text-decoration: none !important; border-bottom: none; }
 
-button { background-image: $back-img; cursor: pointer; }
+button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
 label { cursor: pointer; }
 .wrapper {  @include width-el; @include clearfix; }
+.box-hor-dot {
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 36px;
+  margin-bottom: 32px;
+}
 .bonus {
     padding-top: 4px;
     height: 27px;
@@ -247,8 +302,8 @@ label { cursor: pointer; }
 }
 .top-nav {
     @include clearfix;
-    min-height: 41px;
-  max-height: 82px;
+
+  height: 41px;
     border-top: 1px solid #888888;
     background: {
         image: $back-img;
@@ -257,6 +312,7 @@ label { cursor: pointer; }
         }
         ul {
             @include span-columns(19 omega,30);
+          height: 41px;
           float: left !important;
           li {
               color: $a-col;
@@ -307,6 +363,8 @@ label { cursor: pointer; }
             .vk a:hover { background-position: -27px -68px; }
           li.basket {
                 margin-left: 4% !important;
+            padding-bottom: 20px;
+            position: relative;
                 i {
                     width: 27px;
                     height: 28px;
@@ -373,7 +431,10 @@ label { cursor: pointer; }
             a { font-size: $main-fs; }
             }
             li { margin-left: 1%; }
-            li.basket { margin-left: 2% !important; }
+            li.basket {
+              margin-left: 2% !important;
+
+            }
             ul:first-child {
                 @include span-columns(11,30);
                 li {
@@ -392,6 +453,13 @@ label { cursor: pointer; }
         input { width: 229px !important; }
     }
     .default { padding-bottom: 34px !important; }
+  .left-t {
+    .left-t-cont {
+    .diapazon {
+        input { width: 39px; }
+      }
+    }
+  }
 }
 
 
@@ -692,7 +760,7 @@ label { cursor: pointer; }
               position: absolute;
               right: 48px;
               bottom: 74px;
-              z-index: 1000;
+              z-index: 100;
               li {
                 float:left;
                 margin:0 1px 0 9px;
@@ -1325,6 +1393,939 @@ footer {
         }
     }
 }
+.left-t {
+    @include span-columns(2,10);
+    margin-top: 23px;
+    .left-t-cont {
+        border: 1px solid $light-gray;
+        padding-top: 24px;
+        padding-right: 10px;
+        padding-bottom: 29px;
+        padding-left: 12%;
+        h2 {
+            font-size: $main-fs + 12;
+            color: $main-color;
+            font-family: $font-medium;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+        }
+        h2.h2padd { padding-bottom: 25px; }
+        h3 {
+            
+            font-size: $main-fs + 5;
+            color: $main-color;
+            font-family: $font-medium;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+        }
+        ul {
+            padding-bottom: 19px;
+            li {
+                padding-bottom: 7px;
+                a {
+                    color: $s-bord;
+                    font-size: $main-fs;
+                    font-family: $font-arial;
+                    border-bottom: 1px dotted #76449b;
+                    text-decoration: none;
+                }
+                a:hover {  border-bottom: 1px dotted $wh-bord; }
+            }
+        }
+        .scroll-pane {
+            height: 233px;
+            margin-bottom: 19px;
+            overflow: hidden;
+            .mCustomScrollBox {
+                .mCSB_container {
+                    width: auto;
+                    overflow: hidden;
+                    ul { padding-bottom: 0; }
+                }
+                .mCSB_container.mCS_no_scrollbar{
+                    margin-right:0;
+                }
+                .mCSB_scrollTools{
+                    width:18px;
+                    height:100%;
+                    top:0;
+                    right:0;
+                    .mCSB_draggerContainer{
+                        height:100%;
+                        -webkit-box-sizing:border-box;
+                        -moz-box-sizing:border-box;
+                        box-sizing:border-box;
+                        .mCSB_dragger{
+                            width: 100%;
+                            height: 59px !important;
+                            .mCSB_dragger_bar {
+                                height: 59px;
+                                background: {
+                                    image: $back-img;
+                                    repet: no-repeat;
+                                    position: 0 -993px;
+                                }
+                                width: 18px;
+                                cursor: pointer;
+                            }
+                        }
+                        .mCSB_draggerRail{
+                            width: 1px;
+                            height:100%;
+                            margin:0 auto;
+                            background: #dcdcdb;
+                        }
+                    }
+                }
+            }
+        }
+        .diapazon {
+            margin-top: -7px;
+            input {
+                @include m-input;
+                padding: 3px;
+                width: 52px;
+                height: 16px;
+                float: left;
+            }
+            span {
+                border-top: 1px solid $main-color;
+                float: left;
+                display: inline-block;
+                width: 10px;
+                margin: 12px 5px 0 5px;
+            }
+            button {
+                background-position: -18px -993px;
+                display: inline-block;
+                float: left;
+                width: 9px;
+                height: 10px;
+                padding: 0;
+                border: none;
+                margin-top: 7px;
+                margin-left: 6px;
+                background-color: transparent;
+            }
+        }
+    }
+}
+.center-t {
+  h3 {
+    cursor: $main-color;
+    font-size: $main-fs + 4;
+    font-family: $font-medium;
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-left: 30px;
+  }
+  a { color: $s-bord; }
+    @include span-columns(8 omega,10);
+    margin-top: 23px;
+    .center-t-box {
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: 13px;
+      margin-bottom: 32px;
+      .galery-tovar {
+          @include span-columns(3,6);
+          h3 { padding-left: 30px; }
+          .big-img-box {
+              border: 1px solid $light-gray;
+              padding: 4px;
+              text-align: center;
+              position: relative;
+              img { max-width: 100%; }
+              .action {
+                  background: $s-bord;
+                  color: $wh-bord;
+                  font-size: $main-fs + 4;
+                  font-family: $font-medium;
+                  position: absolute;
+                  top: -1px;
+                  left: -1px;
+                  text-transform: uppercase;
+                  padding: 6px 12px 4px 12px;
+              }
+          }
+        .jcarousel-skin-tango {
+          width: 100%;
+          .jcarousel-container-horizontal {
+            width: 100%;
+            .jcarousel-clip {
+              margin: 0 30px;
+              overflow: hidden;
+            }
+          }
+          .jcarousel-next-horizontal {
+            position: absolute;
+            @include base-i;
+            top: 32px;
+            right: 0;
+            width: 13px;
+            height: 16px;
+            cursor: pointer;
+            background-position: -27px -993px;
+          }
+          .jcarousel-prev-horizontal {
+            position: absolute;
+            top: 32px;
+            left: 0;
+            @include base-i;
+            width: 13px;
+            height: 16px;
+            cursor: pointer;
+            background-position: -27px -1009px;
+          }
+          .jcarousel-next-disabled-horizontal, .jcarousel-prev-disabled-horizontal { cursor: default !important; opacity: 0.5; filter: alpha(opacity=50); }
+        }
+        .slide-small-board {
+          margin-top: 10px;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid $light-gray;
+          .jcarousel-item-horizontal {
+            @include small-slide-li;
+          }
+        }
+        .slide-big-board {
+          margin-top: 18px;
+          .jcarousel-item-horizontal {
+            @include big-slide-li;
+          }
+          .jcarousel-next-horizontal { top: 53px; }
+          .jcarousel-prev-horizontal { top: 53px; }
+        }
+      }
+      .opisanie-tovar {
+        @include span-columns(3 omega,6);
+        h1 {
+          color: $main-color;
+          font-size: $main-fs + 12;
+          font-family: $font-medium;
+          text-transform: uppercase;
+          padding-bottom: 12px;
+          span {
+            font-size: $main-fs;
+            color: $wh-bord;
+            display: inline-block;
+            background: $s-bord;
+            padding: 2px 6px;
+            margin-top: 5px;
+            margin-left: 9px;
+            vertical-align: top;
+          }
+        }
+        h3 { padding-left: 0; }
+        .box-op {
+          div {
+            padding-bottom: 7px;
+            span {
+              display: block;
+              font-weight: bold;
+              padding-top: 7px;
+            }
+            i { @include base-i; }
+            .add-list {
+              i {
+                background-position: -27px -1025px;
+                width: 14px;
+                height: 13px;
+                margin-right: 6px;
+              }
+              a {
+                text-decoration: none;
+                border-bottom: 1px dotted #76449B;
+              }
+              a:hover { border-color: $wh-bord; }
+            }
+            .paste-blog {
+              i {
+                background-position: -27px -1038px;
+                width: 12px;
+                height: 9px;
+                margin: 3px 6px 0 1px;
+              }
+            }
+            .reserv {
+              i {
+                background-position: -41px -993px;
+                width: 10px;
+                height: 14px;
+                margin: -1px 8px 0 2px;
+              }
+            }
+          }
+          .op-l {
+            @include span-columns(3,6);
+            padding-top: 13px;
+          }
+          .op-r {
+            @include span-columns(3 omega,6);
+            padding-top: 13px;
+          }
+        }
+        .price-box {
+          padding: 22px 30px;
+          background: #f0ebf4;
+          margin-top: 22px;
+          .pr-l {
+            @include span-columns(3,6);
+            span {
+              display: block;
+            }
+            .y-price {
+              color: $main-fs;
+              font-size: $main-fs;
+              font-family: $font-arial;
+              padding-bottom: 9px;
+            }
+            .numb-price {
+              font-size: $main-fs + 22;
+              color: $main-color;
+              font-family: $font-medium;
+              padding-bottom: 3px;
+            }
+            .old-price {
+              @extend .y-price;
+              text-transform: uppercase;
+              text-decoration: line-through;
+              padding-bottom: 17px;
+            }
+            .transcr {
+              font-size: $main-fs - 2;
+              color: #a1a19f;
+              font-family: $font-arial;
+            }
+          }
+          .pr-r {
+            @include span-columns(3 omega,6);
+            .add-tovar {
+              float: right;
+              button {
+                float: left;
+                width: 23px;
+                padding: 0;
+                @include small-button;
+                i { @include base-i; }
+              }
+              input {
+                @include m-input;
+                float: left;
+                padding: 3px;
+                height: 16px;
+                width: 34px;
+                margin: 0 10px;
+              }
+              .minus {
+                i {
+                  width: 12px;
+                  height: 5px;
+                  background-position: -41px -1008px;
+                  margin-top: 6px;
+                }
+              }
+              .plus {
+                i {
+                  width: 12px;
+                  height: 13px;
+                  background-position: -41px -1014px;
+                  margin-top: 2px;
+                }
+              }
+            }
+            .add-basket {
+              @include medium-button;
+              height: 30px;
+              margin-top: 9px;
+              float: right;
+              i {
+                @include base-i;
+                width: 18px;
+                height: 18px;
+                background-position: -27px -975px;
+                margin-left: 1px;
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+        .soc-ins-box {
+          margin-top: 15px;
+          border-bottom: 1px solid $light-gray;
+          padding-bottom: 20px;
+          span {
+            float: left;
+            margin-top: 4px;
+            margin-right: 5px;
+          }
+          img {
+            float: left;
+            margin-top: 4px;
+          }
+        }
+        .opisanie-tovar-text {
+          padding-top: 20px;
+          border-bottom: 1px solid $light-gray;
+          padding-bottom: 16px;
+          h3 { padding-bottom: 12px; }
+          p {
+            line-height: 18px;
+          }
+        }
+        .recomend-d {
+          padding-top: 12px;
+          h3 { padding-bottom: 17px; }
+          .img-d {
+            float: left;
+            padding: 4px;
+            border: 1px solid $light-gray;
+            margin-right: 20px;
+          }
+          .text-d {
+            margin-left: 97px;
+            a { font-size: $main-fs + 2; }
+            .spec-d {
+              font-size: 11px;
+              display: block;
+              padding-top: 6px;
+            }
+            p {
+              line-height: 18px;
+              padding-top: 14px;
+            }
+          }
+        }
+      }
+    }
+  .box-hor-dot {
+      margin-left: 30px;
+      h3 { padding-left: 0; }
+      .content_1 { margin-left: 0; }
+  }
+  .content_1 {
+    margin-top: 17px;
+    margin-left: 30px;
+    .mCSB_horizontal  {
+      .mCSB_container{
+        height:auto;
+        margin-right:0;
+        margin-bottom:36px;
+        overflow:hidden;
+        li {
+          float: left;
+          @include big-slide-li;
+        }
+      }
+      .mCSB_scrollTools {
+        margin-top: 6px;
+        width:100%;
+        height:19px;
+        top:auto;
+        right:auto;
+        bottom:0;
+        left:0;
+        overflow:hidden;
+        .mCSB_draggerContainer{
+          height:19px;
+          width:auto;
+          overflow:hidden;
+          .mCSB_dragger{
+            width: 59px !important;
+            height: 19px;
+            background-position: 0 -1052px;
+            @include base-i;
+            cursor: pointer;
+          }
+          .mCSB_draggerRail{
+            height: 10px;
+            margin: 0;
+            margin-top: 3px;
+            @include border-radius(6px);
+            border: 1px solid $light-gray;
+            border-top: 1px solid #b2b2b2;
+            @include box-shadow(#cccccc 0 1px 2px inset);
+          }
+
+        }
+      }
+    }
+    .mCSB_horizontal .mCSB_container.mCS_no_scrollbar{
+      margin-bottom:0;
+    }
+  }
+  .carousel{
+    margin:  0 0 20px 0;
+    position:relative;
+    height: 347px;
+    width: 100%;
+    overflow:hidden;
+    z-index: 1;
+    .panel{
+      background: $s-bord;
+      color: #fff;
+      position:absolute;
+      left: 0;
+      top:0;
+      height: 100%;
+      width: 30%;
+      z-index:10;
+      .details_wrapper {
+        position:absolute;
+        width: 100%;
+        z-index: 10;
+        overflow:hidden;
+        .detail {
+          color: $wh-bord;
+          font-size: $main-fs - 1;
+          font-family: $font-tahoma;
+          line-height: 18px;
+          width: 100%;
+          float:left;
+          padding-top: 34px;
+          p { margin: 0 30px; padding-top: 20px; }
+          h2{
+            color: $wh-bord;
+            font-size: $main-fs + 27;
+            font-family: $font-i;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            line-height: 40px;
+            margin: 0 30px;
+          }
+        }
+      }
+      .paging{
+        position: absolute;
+        left: 21px;
+        bottom: 40px;
+        z-index: 100;
+        a {
+          float:left;
+          margin:0 1px 0 9px;
+          list-style:none;
+          display: block;
+          width:20px;
+          height:20px;
+          font-size: 0;
+          background-image: url(../images/sprite.png);
+          background-position: 0 -126px;
+          float:left;
+          overflow:hidden;
+        }
+        a:hover { background-position: -21px -126px; }
+        .selected { background-position: 0 -147px; }
+      }
+    }
+    .backgrounds-box {
+      margin-left: 30%;
+      width: 70%;
+      height: 100%;
+      .bord-box {
+        border: 1px solid $light-gray;
+        .backgrounds{
+          .item{
+            float:left;
+            position:relative;
+            z-index:1;
+            .item-box {
+              margin: 4px;
+              overflow: hidden;
+              img {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pagination-box {
+    border-top: 1px solid $light-gray;
+    padding-top: 15px;
+    color: $main-color;
+    font-size: $main-fs - 1;
+    a { color: $main-color; }
+    .page-box {
+      float: left;
+      .arrow-a {
+        display: inline-block;
+        float: left;
+        text-decoration: none;
+        margin-top: 6px;
+        span { text-decoration: underline; }
+      }
+      a:hover {
+        span { text-decoration: none; }
+      }
+      .arrow-a.no-active {
+        cursor: text;
+        span { text-decoration: none; }
+      }
+      .pages {
+        float: left;
+        margin: 0 20px;
+        li {
+          float: left;
+          padding: 6px 10px 7px 10px;
+          @include border-radius(3px);
+        }
+        li.active {
+          background: #6e3997;
+          a {
+            color: $wh-bord;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .sort-box {
+      float: right;
+      margin-top: 6px;
+      span {
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 16px;
+      }
+      a {
+        display: inline-block;
+        margin-right: 15px;
+        color: $s-bord;
+        text-decoration: none;
+        border-bottom: 1px dotted #76449b;
+      }
+      a:hover { border-color: $wh-bord; }
+      .recom-da {
+        color: $main-color;
+        border: none;
+        margin-right: 0;
+        span {
+          border-bottom: 1px dotted #4e4f4b;
+          font-weight: normal;
+          margin-right: 0;
+        }
+        i {
+          @include base-i;
+          width: 5px;
+          height: 3px;
+          background-position: -39px -9px;
+          margin-top: 6px;
+          margin-left: 4px;
+        }
+      }
+      .recom-da:hover {
+        span { border-color: $wh-bord; }
+      }
+    }
+  }
+  .pagination-box.bottom-pag { margin-top: -21px; padding-top: 20px; margin-bottom: 48px; }
+  .catalog-tovar {
+    padding-top: 9px;
+    li {
+      display: inline-block;
+      margin-right: 26px;
+      padding-bottom: 29px;
+      margin-top: 10px;
+      width: 267px;
+      border-bottom: 1px solid $light-gray;
+      margin-bottom: 20px;
+      .img-box {
+        border: 1px solid $light-gray;
+        padding: 4px;
+        position: relative;
+        width: 257px;
+        height: 198px;
+        margin-bottom: 38px;
+        div {
+          position: absolute;
+          width: 242px;
+          bottom: 4px;
+          height: 50px;
+          padding-top: 59px;
+          padding-left: 15px;
+          background: {
+            image: $back-img;
+            repeat: repeat-x;
+            position: 0 -1071px;
+          }
+          left: 4px;
+          a {
+            color: $wh-bord;
+            font-size: $main-fs - 2;
+          }
+          .fb, .vk {
+            @include base-i;
+            width: 26px;
+            height: 27px;
+          }
+          .vk { background-position: 0 -68px; margin-right: 16px; }
+          .vk:hover { background-position: -27px -68px; }
+          .fb { background-position: 0 -40px; margin-right: 3px; }
+          .fb:hover { background-position: -27px -40px; }
+          .add-list {
+            display: inline-block;
+            margin-top: 4px;
+            margin-right: 16px;
+          }
+          .add-basket {
+            @include medium-button;
+            padding: 0 3px 0 1px;
+            width: 30px;
+            margin-top: -2px;
+            height: 28px;
+            i {
+              @include base-i;
+              width: 18px;
+              height: 18px;
+              background-position: -27px -975px;
+            }
+          }
+        }
+      }
+      .name-tovar {
+        font-size: $main-fs + 4;
+        color: $main-color;
+        font-family: $font-medium;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid $light-board;
+      }
+      .name-tovar:hover { border-color: $wh-bord; }
+      .artic-tovar {
+        padding-top: 2px;
+        display: block;
+        font-size: $main-fs - 2;
+        font-family: $font-arial;
+        color: #7c7e76;
+      }
+      .price-tovar {
+        padding-top: 22px;
+        padding-bottom: 5px;
+        font-size: $main-fs + 7;
+        font-family: $font-arial;
+        color: $s-bord;
+        font-weight: bold;
+        span {
+          font-size: $main-fs;
+          color: $main-color;
+          font-weight: normal;
+          background: $back-img 0 -1192px repeat-x;
+          padding-left: 2px;
+        }
+      }
+      .proisv-tovar {
+        a { text-decoration: underline; }
+        a:hover { text-decoration: none; }
+      }
+    }
+    .otm-li {
+      .name-tovar { color: $s-bord; }
+    }
+  }
+}
+
+.vv-box.ww-small {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.vv-box {
+  opacity: 1;
+  padding: 20px 25px 35px 25px;
+  width: 396px;
+  display: none;
+  background: $wh-bord;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  right: -27px;
+  @include box-shadow(#d8d8d8 0 0 5px);
+  .arr-span {
+    @include base-i;
+    width: 29px;
+    height: 12px;
+    background-position: 0 -1180px;
+    position: absolute;
+    top: -12px;
+    right: 95px;
+  }
+  .vv-head {
+    span {
+      float: left;
+      font-size: $main-fs;
+      color: $main-color;
+      font-family: $font-arial;
+      border: none;
+      font-weight: normal;
+      margin-left: 4px;
+    }
+    a {
+      float: right;
+      display: inline-block;
+      margin-right: 47px;
+      text-decoration: none;
+      color: $s-bord;
+      font-size: $main-fs;
+      border-bottom: 1px dotted $s-bord;
+    }
+  }
+  .scroll-pane {
+    height: 300px;
+    margin-top: 10px;
+    .mCustomScrollBox {
+      .mCSB_container {
+        width: auto;
+        overflow: hidden;
+        .basket-ul {
+          width: 350 !important;
+          height: auto;
+          li {
+            margin-top: 3px;
+            width: 348px;
+            border-bottom: 1px solid $light-gray;
+            padding-bottom: 17px;
+            position: relative;
+            .close-a {
+              position: absolute;
+              top: 16px;
+              right: 2px;
+              width: 8px;
+              height: 8px;
+              @include base-i;
+              background-position: -27px -777px;
+            }
+            .close-a:hover { background-position: -35px -777px; }
+            img {
+              float: left;
+              border: 1px solid $light-gray;
+            }
+            .basket-li-right {
+              width: 262px;
+              margin-left: 24px;
+              float: left;
+              a {
+                font-size: $main-fs - 1;
+                font-family: $font-arial;
+                color: $main-color;
+                text-decoration: underline;
+              }
+              .add-tovar {
+                float: left;
+                margin-top: 22px;
+                button {
+                  float: left;
+                  width: 23px;
+                  padding: 0;
+                  @include small-button;
+                  i {
+                    @include base-i;
+                    margin-right: 0;
+                  }
+                }
+                input {
+                  @include m-input;
+                  float: left;
+                  padding: 3px;
+                  height: 16px;
+                  width: 34px;
+                  margin: 0 10px;
+                }
+                .minus {
+                  i {
+                    width: 12px;
+                    height: 5px;
+                    background-position: -41px -1008px;
+                    margin-top: 6px;
+                  }
+                }
+                .plus {
+                  i {
+                    width: 12px;
+                    height: 13px;
+                    background-position: -41px -1014px;
+                    margin-top: 2px;
+                  }
+                }
+              }
+              .price-basket {
+                margin-top: 20px;
+                margin-left: 23px;
+                float: left;
+                width: 130px;
+                font-size: $main-fs + 1;
+                color: $main-color;
+                font-family: $font-arial;
+                span {
+                  font-size: $main-fs + 2;
+                  display: block;
+                  margin-top: 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .mCSB_container.mCS_no_scrollbar{
+        margin-right:0;
+      }
+      .mCSB_scrollTools{
+        width:18px;
+        height:100%;
+        top:0;
+        right:0;
+        .mCSB_draggerContainer{
+          height:100%;
+          -webkit-box-sizing:border-box;
+          -moz-box-sizing:border-box;
+          box-sizing:border-box;
+          .mCSB_dragger{
+            width: 100%;
+            height: 59px !important;
+            .mCSB_dragger_bar {
+              height: 59px;
+              background: {
+                image: $back-img;
+                repet: no-repeat;
+                position: 0 -993px;
+              }
+              width: 18px;
+              cursor: pointer;
+            }
+          }
+          .mCSB_draggerRail{
+            width: 1px;
+            height:100%;
+            margin:0 auto;
+            background: #dcdcdb;
+          }
+        }
+      }
+    }
+  }
+  .bottom-bask {
+    padding-top: 24px;
+    button {
+      @include medium-button;
+      float: left;
+      margin-right: 54px;
+      font-size: $main-fs + 1;
+      padding: 0;
+      width: 161px;
+    }
+    .itogo {
+      float: left;
+      font-size: $main-fs + 2;
+      color: $main-color;
+      span {
+        font-weight: bold;
+        display: block;
+        color: #9674df;
+      }
+    }
+  }
+}
+
+
+
 
 
 
