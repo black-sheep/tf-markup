@@ -98,116 +98,458 @@
                     %a{:href => "#"} Ростов
                   %li
                     %a{:href => "#"} Калининград
+        %nav.main-menu
+          %ul
+            %li.hidden-ul
+              %a{:href => "#"} Мебель и обстановка
+              %i.arrow-down
+              %ul.hide-ul{"data-left" => "41"}
+                %li
+                  %h4 Мебель
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Диваны
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла
+                    %li
+                      %i
+                      %a{:href => "#"} Кровати
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                    %li
+                      %i
+                      %a{:href => "#"} Шкафы и комоды
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Стулья
+                %li
+                  %h4 Мебельные аксессуары
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Журнальные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Этажерки
+                    %li
+                      %i
+                      %a{:href => "#"} Стеллажи и полки
+                    %li
+                      %i
+                      %a{:href => "#"} Ширмы
+                    %li
+                      %i
+                      %a{:href => "#"} Вешалки для прихожей
+                    %li
+                      %i
+                      %a{:href => "#"} Сервировочные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Газетницы
+                %li
+                  %h4 Мебель для кабинетов
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла и стулья
+                    %li
+                      %i
+                      %a{:href => "#"} Системы хранения (шкафы, полки)
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                %li
+                  %h4 Свет
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Напольные светильники
+                    %li
+                      %i
+                      %a{:href => "#"} Настольные светильники
+            %li
+              %a{:href => "#"} декор и аксессуары
+            %li
+              %a{:href => "#"} товары для детской
+            %li
+              %a{:href => "#"} здоровый образ жизни
+            %li
+              %a{:href => "#"} подарки для дома
+            %li
+              %a{:href => "#"} дизайнерские вещи
+            %li
+              %a{:href => "#"} sale
+        .crump
+          %ul
+            %li
+              %a{:href => "#"} Главная
+              %i
+            %li
+              %a{:href => "#"} Личный кабинет
+              %i
+            %li
+              %a{:href => "#"} Добавить товар
     .wrapper
-      .basket-page
-        .head-bsk
-          %h1 Корзина
-          %a.ret-shop{:href => "#"}
-            ←
-            %span Вернуться в магазин
-          %a.a-basket{:href => "#"}
-        %table.table-basket
-          %tbody
-            %tr
-              %th.tov-img Товар
-              %th Название
-              %th Цена
-              %th Кол-во
-              %th Итого
-              %th
-            %tr.name-razdel
-              %td{:colspan => "6"} Мезанин
-            %tr.tr-bord
-              %td.tov-img
-                %img{:alt => "", :src => "images/content/bs1.jpg"}/
-              %td.tov-op
-                %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
-                .tov-artik Артикул: 098766
-                .tov-artik Салон: Мезанин
-              %td.tov-price
-                %div 305 440 Р
-              %td.tov-colvo
-                .add-tovar
-                  %button.minus
-                    %i
-                  %input{:type => "text", :value => "2"}/
-                  %button.plus
-                    %i
-              %td.tov-itogo
-                %div 1 905 440 Р
-                .reserv Резерв в салоне
-              %td.close-td
-                %a{:href => "#"}
-            %tr.tr-bord
-              %td.tov-img
-                %img{:alt => "", :src => "images/content/bs1.jpg"}/
-              %td.tov-op
-                %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
-                .tov-artik Артикул: 098766
-                .tov-artik Салон: Мезанин
-              %td.tov-price
-                %div 30 440 Р
-              %td.tov-colvo
-                .add-tovar
-                  %button.minus
-                    %i
-                  %input{:type => "text", :value => "6"}/
-                  %button.plus
-                    %i
-              %td.tov-itogo
-                %div 60 440 Р
-                .reserv Резерв в салоне
-              %td.close-td
-                %a{:href => "#"}
-            %tr
-              %td{:colspan => "4"}
-              %td.poditog{:colspan => "2"} Итого: 1 996 020 Р
-            %tr.name-razdel
-              %td{:colspan => "6"} Furnish
-            %tr.tr-bord
-              %td.tov-img
-                %img{:alt => "", :src => "images/content/bs1.jpg"}/
-              %td.tov-op
-                %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
-                .tov-artik Артикул: 098766
-                .tov-artik Салон: Furnish
-              %td.tov-price
-                %div 305 440 Р
-              %td.tov-colvo
-                .add-tovar
-                  %button.minus
-                    %i
-                  %input{:type => "text", :value => "2"}/
-                  %button.plus
-                    %i
-              %td.tov-itogo
-                %div 1 905 440 Р
-                .reserv Резерв в салоне
-              %td.close-td
-                %a{:href => "#"}
-            %tr
-              %td{:colspan => "4"}
-              %td.poditog{:colspan => "2"} Итого: 1 996 020 Р
-            %tr.tr-last
-              %td{:colspan => "4"}
-                .points
-                  %a{:href => "#"} Пересчитать
+      .box-hor-dot
+        .left-t
+          .left-t-cont
+            %h2 Диваны
+            %ul
+              %li
+                %a{:href => "#"} Диваны угловые
+              %li
+                %a{:href => "#"} Диваны прямые
+              %li
+                %a{:href => "#"} На 2 места
+              %li
+                %a{:href => "#"} На 3 места
+              %li
+                %a{:href => "#"} Раскладывающиеся
+            %h3 стиль
+            .scroll-pane.content
+              %ul
+                %li
+                  %a{:href => "#"} Европа
+                %li
+                  %a{:href => "#"} Модерн
+                %li
+                  %a{:href => "#"} Нью-йорк
+                %li
+                  %a{:href => "#"} Эко и здоровье
+                %li
+                  %a{:href => "#"} Европа
+                %li
+                  %a{:href => "#"} Модерн
+                %li
+                  %a{:href => "#"} Нью-йорк
+                %li
+                  %a{:href => "#"} Эко и здоровье
+                %li
+                  %a{:href => "#"} Европа
+                %li
+                  %a{:href => "#"} Модерн
+                %li
+                  %a{:href => "#"} Нью-йорк
+                %li
+                  %a{:href => "#"} Эко и здоровье
+                %li
+                  %a{:href => "#"} Европа
+                %li
+                  %a{:href => "#"} Модерн
+                %li
+                  %a{:href => "#"} Нью-йорк
+                %li
+                  %a{:href => "#"} Эко и здоровье
+                %li
+                  %a{:href => "#"} Европа
+                %li
+                  %a{:href => "#"} Модерн
+                %li
+                  %a{:href => "#"} Нью-йорк
+                %li
+                  %a{:href => "#"} Эко и здоровье
+                %li
+                  %a{:href => "#"} Европа
+                %li
+                  %a{:href => "#"} Модерн
+                %li
+                  %a{:href => "#"} Нью-йорк
+                %li
+                  %a{:href => "#"} Эко и здоровье
+            %h3 производитель
+            .scroll-pane.content
+              %ul
+                %li
+                  %a{:href => "#"} Lego
+                %li
+                  %a{:href => "#"} Adidas
+                %li
+                  %a{:href => "#"} Coca-Cola
+                %li
+                  %a{:href => "#"} BMW
+                %li
+                  %a{:href => "#"} Lego
+                %li
+                  %a{:href => "#"} Adidas
+                %li
+                  %a{:href => "#"} Coca-Cola
+                %li
+                  %a{:href => "#"} BMW
+                %li
+                  %a{:href => "#"} Lego
+                %li
+                  %a{:href => "#"} Adidas
+                %li
+                  %a{:href => "#"} Coca-Cola
+                %li
+                  %a{:href => "#"} BMW
+                %li
+                  %a{:href => "#"} Lego
+                %li
+                  %a{:href => "#"} Adidas
+                %li
+                  %a{:href => "#"} Coca-Cola
+                %li
+                  %a{:href => "#"} BMW
+                %li
+                  %a{:href => "#"} Lego
+                %li
+                  %a{:href => "#"} Adidas
+                %li
+                  %a{:href => "#"} Coca-Cola
+                %li
+                  %a{:href => "#"} BMW
+                %li
+                  %a{:href => "#"} Lego
+                %li
+                  %a{:href => "#"} Adidas
+                %li
+                  %a{:href => "#"} Coca-Cola
+                %li
+                  %a{:href => "#"} BMW
+            %h3 материал
+            %ul
+              %li
+                %a{:href => "#"} Кожа
+              %li
+                %a{:href => "#"} Дерево
+              %li
+                %a{:href => "#"} Пластик
+              %li
+                %a{:href => "#"} Кожа корупционера
+            %h3 цена
+            %ul
+              %li
+                %a{:href => "#"} До 5 000 Р
+                %span (35)
+              %li
+                %a{:href => "#"} От 5 000 Р до 10 000 Р
+                %span (50)
+              %li
+                %a{:href => "#"} От 10 000 Р до 20 000Р
+                %span (9)
+            .diapazon
+              %input{:type => "text", :value => ""}/
+              %span
+              %input{:type => "text", :value => ""}/
+              %button
+        .center-t
+          .center-t-box
+            .galery-tovar
+              .big-img-box
+                .action акция
+                %img{:alt => "", :src => "images/content/im4.jpg"}/
+              .slide-small-board
+                %ul.mycarousel.jcarousel-skin-tango
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s1.jpg"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s2.jpg"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s3.jpg"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s2.jpg"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s1.jpg"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s3.jpg"}/
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "", :src => "images/content/s2.jpg"}/
+              %h3 Модификации товара
+              .slide-big-board
+                %ul.mycarousel.jcarousel-skin-tango
+                  %li
+                    %span
+                      %img{:alt => "", :src => "images/content/s4.jpg"}/
+                    %a{:href => "#"} Диван кожаный черно-синий
+                    %span.price 2 940 Р
+                  %li
+                    %span
+                      %img{:alt => "", :src => "images/content/s5.jpg"}/
+                    %a{:href => "#"} Диван кожаный черно-синий
+                    %span.price 2 940 Р
+                  %li
+                    %span
+                      %img{:alt => "", :src => "images/content/s6.jpg"}/
+                    %a{:href => "#"} Диван кожаный черно-синий
+                    %span.price 2 940 Р
+                  %li
+                    %span
+                      %img{:alt => "", :src => "images/content/s5.jpg"}/
+                    %a{:href => "#"} Диван кожаный черно-синий
+                    %span.price 2 940 Р
+                  %li
+                    %span
+                      %img{:alt => "", :src => "images/content/s4.jpg"}/
+                    %a{:href => "#"} Диван кожаный черно-синий
+                    %span.price 2 940 Р
+                  %li
+                    %span
+                      %img{:alt => "", :src => "images/content/s6.jpg"}/
+                    %a{:href => "#"} Диван кожаный черно-синий
+                    %span.price 2 940 Р
+            .opisanie-tovar
+              %h1
+                Антикварная сантехника
+                %span sale
+              .box-op
+                .op-l
                   %div
-                    %input#ch1{:type => "checkbox"}/
-                    %label{:for => "ch1"} Использовать
-                  %div
-                    Ваши баллы
-                    %span 14 500
-              %td.all-itog{:colspan => "2"}
-                %div Сумма заказа,
+                    Производитель:
+                    %a{:href => "#"} Garmin
+                  %div Арт.: 0236584
+                .op-r
+                  .add-list
+                    %i
+                    %a{:href => "#"} Добавить в список желаний
+                  .paste-blog
+                    %i
+                    %a{:href => "#"} Вставить в блог
+              .box-op
+                .op-l
+                  Представлено салоном
+                  %span «Мезанин»
+                .op-r
+                  .reserv
+                    %i
+                    %a{:href => "#"} Резерв салоне
+              .price-box
+                .pr-l
+                  %span.y-price Ваша цена*:
+                  %span.numb-price 220 256 Р
+                  %span.old-price 300 010 Р
+                  %span.transcr * — ваша цена с учетом скидок и накопленных баллов
+                .pr-r
+                  .add-tovar
+                    %button.minus
+                      %i
+                    %input{:type => "text", :value => ""}/
+                    %button.plus
+                      %i
+                  %button.add-basket
+                    %i>
+                    В корзину
+              .soc-ins-box
+                %span Поделись этим товаром:
+                %img{:alt => "", :src => "images/content/soc-ins.jpg"}/
+              .opisanie-tovar-text
+                %h3 Описание товара
+                %p
+                  Антиквариат в целом — это старые и/или редкие художественные произведения или другие ценные вещи, которые являются объектами коллекционирования и торговли. К антикварным предметам наиболее часто относят мебель, антикварные книги, картины, предметы домашнего обихода и т. д.
+                  %a{:href => "#"} Подробнее
+              .recomend-d
+                %h3 Рекомендовано дизайнером
                 %div
-                  %a{:href => "#"}> без учета доставки
-                  \: 2 310 880 Р
-        .garant-box
-          %div
-            Мы гарантируем, что проверим наличие выбранных товаров у наших поставщиков и свяжемся с Вами для подтверждения времени доставки
-            %span в течение 8 часов
-          %button Оформить заказ
+                  .img-d
+                    %img{:alt => "", :src => "images/content/a1.jpg"}/
+                  .text-d
+                    %h4
+                      %a{:href => "#"} Сергей Кузнецов
+                    %span.spec-d дизайнер FBR
+                    %p Антиквариат в целом — это старые и/или редкие художественные произведения или другие ценные вещи, которые являются объектами коллекционирования и торговли.
+          .box-hor-dot
+            %h3 С этим подойдет
+            .scroll-pane.content_1
+              %ul
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s6.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s4.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s5.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s4.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s6.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s4.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s5.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+                %li
+                  %span
+                    %img{:alt => "", :src => "images/content/s6.jpg"}/
+                  %a{:href => "#"} Диван кожаный черно-синий
+                  %span.price 2 940 Р
+          %h3 Похожие товары
+          .scroll-pane.content_1
+            %ul
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s4.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s5.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s6.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s5.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s4.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s6.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "images/content/s4.jpg", :src => ""}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
+              %li
+                %span
+                  %img{:alt => "", :src => "images/content/s5.jpg"}/
+                %a{:href => "#"} Диван кожаный черно-синий
+                %span.price 2 940 Р
     %footer
       .wrapper
         %nav.foot-left
