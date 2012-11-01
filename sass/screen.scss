@@ -239,13 +239,36 @@ $light-purple: #814ca9;
         style: solid;
     }
 }
-
+.popup-form {
+  .close-a {
+    @include base-i;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-position: -45px -777px;
+    top: 20px;
+    right: 20px;
+  }
+}
 body { background: #fff; font-family: Arial, sans-serif;
   color: $main-color; font-size: $main-fs;
   position: relative;
 }
 a:hover, a:hover span { text-decoration: none !important; border-bottom: none; }
-
+h1 {
+    font-size: $main-fs + 22;
+    color: $main-color;
+    font-family: $font-medium;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+h2 {
+    font-size: $main-fs + 12;
+    color: $main-color;
+    font-family: $font-medium;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
 button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
 label { cursor: pointer; }
 .wrapper {  @include width-el; @include clearfix; }
@@ -708,6 +731,10 @@ label { cursor: pointer; }
                 margin-right: 8px;
             }
         }
+        .last {
+            cursor: text;
+            a { text-decoration: none; }
+        }
     }
 }
 .main-cont {
@@ -989,6 +1016,40 @@ footer {
   a { color: $wh-bord; }
   .head-form { border-bottom-color: $light-purple; }
 }
+.schet-box {
+  background: $wh-bord;
+  width: 430px;
+  padding: 36px 79px 72px 79px;
+  h3 {
+    font-family: $font-arial;
+    font-size: $main-fs + 7;
+    color: $main-color;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+  p {
+    line-height: 20px;
+  }
+  .download {
+    margin-top: 43px;
+    display: inline-block;
+    font-size: $main-fs + 7;
+    color: $s-bord;
+    text-decoration: none;
+    span { border-bottom: 2px solid #9169af; }
+    i {
+      @include base-i;
+      width: 24px;
+      height: 29px;
+      background-position: 0 -1241px;
+      margin-right: 18px;
+      margin-top: -3px;
+    }
+  }
+  .download:hover {
+    span { border-color: $wh-bord; }
+  }
+}
 
 /*zaglushka*/
 .zagl-cont {
@@ -1089,8 +1150,9 @@ footer {
 .gray-cont {
     margin-top: 30px;
     padding: 39px 59px 40px 59px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     background: #f9f9f9;
+    position: relative;
     h1 {
         text-align: center;
         font-size: 36px;
@@ -1098,6 +1160,10 @@ footer {
         font-family: $font-medium;
         text-transform: uppercase;
         padding-bottom: 31px;
+    }
+    h2 {
+      text-align: center;
+      font-size: $main-fs + 15;
     }
     .name-op {
         font-size: $main-fs;
@@ -1119,7 +1185,17 @@ footer {
              text-indent: 5px;
              padding: 3px 0;
         }
+      input.s-inp { width: 143px !important; }
+      input.xs-inp { width: 66px !important; }
+      input.xxs-inp { width: 44px !important; }
+      ins { text-decoration: none; padding: 0 7px; }
     }
+  .card-data {
+    .box-sel {
+      float: left;
+      margin-right: 20px;
+    }
+  }
     .load-file {
         padding-top: 33px;
         padding-bttom: 20px;
@@ -1392,6 +1468,103 @@ footer {
             }
         }
     }
+  .box-form-zakaz {
+    width: 840px;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $light-gray;
+    input[type="text"], select { width: 363px; }
+    textarea {
+      width: 363px;
+      border: 1px solid $main-color;
+      height: 150px;
+      resize: none;
+      font-family: $font-arial;
+      color: $main-color;
+      font-size: $main-fs;
+      text-indent: 5px;
+    }
+    h3 {
+      font-size: $main-fs + 4;
+      color: $main-color;
+      font-family: $font-medium;
+      text-transform: uppercase;
+      padding-bottom: 25px;
+    }
+    .box-b-z {
+      padding-bottom: 36px;
+      p {
+        line-height: 20px;
+        margin-top: -3px;
+      }
+      .pay-variant {
+        padding-top: 22px;
+        span {
+          font-weight: bold;
+          display: block;
+          padding-bottom: 25px;
+        }
+        div {
+          padding-bottom: 19px;
+          input { float: left; margin: 0 13px 0 0; }
+          label { float: left; }
+        }
+      }
+    }
+    .left-z {
+      @include span-columns(3,6);
+    }
+    .right-z {
+      @include span-columns(3 omega,6);
+    }
+  }
+  .center-purple-btn {
+    text-align: center;
+    padding-top: 28px;
+    button { @include medium-button; }
+  }
+  .center-purple-btn.ret-f {
+    padding-top: 24px;
+    button { padding-left: 27px; padding-right: 27px; }
+  }
+  .a-basket {
+    width: 27px;
+    height: 28px;
+    @include base-i;
+    background-position: 0 -96px;
+    position: absolute;
+    right: 34px;
+    top: 39px;
+  }
+  .a-basket:hover { background-position: -27px -96px; }
+  .return-box {
+    width: 514px;
+    padding-top: 18px;
+    margin: 0 auto;
+    textarea {
+      border: 1px solid $main-color;
+      font-family: $font-arial;
+      font-size: $main-fs;
+      color: $main-color;
+      text-indent: 5px;
+      resize: none;
+      width: 100%;
+    }
+    .return-pr {
+      line-height: 20px;
+      padding-bottom: 44px;
+    }
+    .left-z {
+      @include span-columns(3,6);
+      textarea { height: 65px; }
+    }
+    .right-z {
+      @include span-columns(3 omega,6);
+      textarea { height: 124px; }
+    }
+  }
+  .comm-ret { padding-top: 32px; color: #9f9f9f; text-align: center; }
 }
 .left-t {
     @include span-columns(2,10);
@@ -1402,13 +1575,6 @@ footer {
         padding-right: 10px;
         padding-bottom: 29px;
         padding-left: 12%;
-        h2 {
-            font-size: $main-fs + 12;
-            color: $main-color;
-            font-family: $font-medium;
-            text-transform: uppercase;
-            padding-bottom: 5px;
-        }
         h2.h2padd { padding-bottom: 25px; }
         h3 {
             
@@ -2324,7 +2490,59 @@ footer {
   }
 }
 
-
+.contacts {
+    padding-top: 34px;
+    line-height: 20px;
+    min-height: 650px;
+    .left-cont {
+        a { color: $s-bord; }
+        @include span-columns(3,10);
+        padding-top: 33px;
+        h3 {
+            color: $main-color;
+            font-size: $main-fs + 2;
+            font-family: $font-arial;
+            font-weight: bold;
+        }
+        .box-cont {
+            padding-bottom: 20px;
+        }
+    }
+    .right-cont {
+      @include span-columns(6 omega,10);
+      padding-top: 41px;
+        .map-cont {
+            padding: 4px;
+            border: 1px solid $light-gray;
+            float: right;
+            img { max-width: 100%; display: block; }
+        }
+    }
+}
+.text-box {
+    line-height: 18px;
+    padding-top: 43px;
+    h1 { padding-bottom: 31px; }
+    .large-text {
+        font-size: $main-fs + 3;
+        color: $main-color;
+        font-family: $font-arial;
+        line-height: 20px;
+        padding-bottom: 20px !important;
+    }
+    h4 {
+        color: $main-color;
+        font-size: $main-fs;
+        font-family: $font-arial;
+        font-weight: bold;
+        padding-bottom: 18px;
+    }
+    p, ul { padding-bottom: 18px; }
+    .bold-t {
+        display: block;
+        font-weight: bold;
+    }
+}
 
 
 

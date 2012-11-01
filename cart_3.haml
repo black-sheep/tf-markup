@@ -1,0 +1,289 @@
+<!doctype html>
+%html
+  %head
+    %title Furnish
+    %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:charset => "UTF-8"}/
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"}
+    :javascript
+      !window.jQuery && document.write(unescape('%3Cscript src="jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))    %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+    :javascript
+      !window.jQuery.ui && document.write(unescape('%3Cscript src="jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/slides.jquery.js"}
+    %script{:src => "js/funcs.js"}
+    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/jquery.mCustomScrollbar.js"}
+    %script{:src => "js/jcarousel.js", :type => "text/javascript"}
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if IE]
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %body{"data-ws" => "1065"}
+    .bonus
+      %a{:href => "#"} Дополнительные бонусы для Вас и Ваших друзей
+      %button Подробнее
+      %a.close-a{:href => "#"}
+    %header
+      %nav.top-nav
+        .wrapper
+          %ul
+            %li
+              %a{:href => "#"} О проекте
+            %li
+              %a{:href => "#"} Вопросы и ответы
+            %li
+              %a{:href => "#"} Контакты
+            %li
+              %a{:href => "#"}
+                %img{:src => "images/content/like.png"}/
+          %ul
+            %li
+              %a{:href => "#"} Выход
+            %li.bord-dot.basket
+              %a{:href => "#"}
+                %i
+                %span Корзина
+            %li.setting.active
+              %a{:href => "#"}
+            %li
+              Ваши баллы:
+              %span 2 600
+            %li.bord-dot.user-kab.active
+              %a{:href => "#"}
+                %i
+                %span Личный кабинет
+            %li.soc-li.vk
+              %a{:href => "#"}
+            %li.soc-li.fb
+              %a{:href => "#"}
+            %li.soc-li.tw
+              %a{:href => "#"}
+      .wrapper
+        .main-head
+          .alleft
+            .search-box
+              %span Поиск по сайту:
+              %div
+                %input{:type => "text"}/
+                %button
+            %nav.dop-menu
+              %ul
+                %li
+                  %i
+                  %a{:href => "#"} Выберите дизайнера
+                %li
+                  %i
+                  %a{:href => "#"} Консьерж-сервис
+                %li
+                  %i
+                  %a{:href => "#"} Блог о дизайне
+          .alcenter
+            %img{:alt => "", :src => "images/content/logo.png"}/
+          .alright
+            .phone
+              %span> 495
+              333-93-40
+            .town
+              %span Ваш город:
+              .purple
+                %a{:href => "#"}
+                  %span Москва
+                %i.arrow-down
+                %ul
+                  %li
+                    %a.active{:href => "#"} Москва
+                  %li
+                    %a{:href => "#"} Санкт-Петербург
+                  %li
+                    %a{:href => "#"} Ростов
+                  %li
+                    %a{:href => "#"} Калининград
+        %nav.main-menu
+          %ul
+            %li.hidden-ul
+              %a{:href => "#"} Мебель и обстановка
+              %i.arrow-down
+              %ul.hide-ul{"data-left" => "41"}
+                %li
+                  %h4 Мебель
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Диваны
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла
+                    %li
+                      %i
+                      %a{:href => "#"} Кровати
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                    %li
+                      %i
+                      %a{:href => "#"} Шкафы и комоды
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Стулья
+                %li
+                  %h4 Мебельные аксессуары
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Журнальные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Этажерки
+                    %li
+                      %i
+                      %a{:href => "#"} Стеллажи и полки
+                    %li
+                      %i
+                      %a{:href => "#"} Ширмы
+                    %li
+                      %i
+                      %a{:href => "#"} Вешалки для прихожей
+                    %li
+                      %i
+                      %a{:href => "#"} Сервировочные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Газетницы
+                %li
+                  %h4 Мебель для кабинетов
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла и стулья
+                    %li
+                      %i
+                      %a{:href => "#"} Системы хранения (шкафы, полки)
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                %li
+                  %h4 Свет
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Напольные светильники
+                    %li
+                      %i
+                      %a{:href => "#"} Настольные светильники
+            %li
+              %a{:href => "#"} декор и аксессуары
+            %li
+              %a{:href => "#"} товары для детской
+            %li
+              %a{:href => "#"} здоровый образ жизни
+            %li
+              %a{:href => "#"} подарки для дома
+            %li
+              %a{:href => "#"} дизайнерские вещи
+            %li
+              %a{:href => "#"} sale
+        .crump
+          %ul
+            %li
+              %a{:href => "#"} Главная
+              %i
+            %li
+              %a{:href => "#"} Корзина
+              %i
+            %li
+              %a{:href => "#"} Оформить заказ
+    .wrapper
+      .gray-cont
+        %h2 оформить заказ
+        %a.a-basket{:href => "#"}
+        .box-form-zakaz
+          %div
+            .left-z
+              .box-b-z
+                %h3 Информация для доставки
+                .box-sel
+                  %span.name-op ФИО *
+                  %input{:type => "text", :value => ""}/
+                .box-sel
+                  %span.name-op Телефон *
+                  %input{:type => "text", :value => ""}/
+                .box-sel
+                  %span.name-op Индекс
+                  %input{:type => "text", :value => ""}/
+                .box-sel
+                  %span.name-op Город *
+                  %input{:type => "text", :value => ""}/
+                .box-sel
+                  %span.name-op Адрес доставки *
+                  %select
+                    %option 1
+                    %option 2
+                    %option 3
+                    %option 4
+                    %option 5
+            .right-z
+              .box-sel
+                %span.name-op Комментарий
+                %textarea
+          %div
+            .left-z
+              .box-b-z
+                %h3 Доставка и оплата
+                %p С 20 по 21 октября на ул. Комсомола, д. 37, к. 3, лит. А будут производиться работы по укладке асфальта. В данный период проезд клиентам на личном  автотранспорте до офиса EMS Russian Post будет запрещен. В случае оставления автотранспорта на данной территории он будет  вывезен эвакуатором.
+                .pay-variant
+                  %span Выберите способ оплаты:
+                  %div
+                    %input#r1{:type => "radio"}/
+                    %label{:for => "r1"} По карте
+                  %div
+                    %input#r2{:type => "radio"}/
+                    %label{:for => "r2"} Безнал для юр. лиц
+                  %div
+                    %input#r3{:type => "radio"}/
+                    %label{:for => "r3"} Безнал для физ. лиц
+                  %div
+                    %input#r4{:type => "radio"}/
+                    %label{:for => "r4"} Наличными курьеру
+            .right-z
+              .box-b-z
+                %h3 Оплата по карте
+                .box-sel
+                  %span.name-op Имя (как на карте) *
+                  %input{:type => "text", :value => ""}/
+                .box-sel
+                  %span.name-op Номер карты *
+                  %input{:type => "text", :value => ""}/
+                .card-data
+                  .box-sel
+                    %span.name-op Истечение срока карты *
+                    %input.xxs-inp{:type => "text", :value => ""}/
+                    %ins /
+                    %input.xs-inp{:type => "text", :value => ""}/
+                  .box-sel
+                    %span.name-op CVV код *
+                    %input.xxs-inp{:type => "text", :value => ""}/
+        .center-purple-btn
+          %button Подтвердить заказ
+    %footer
+      .wrapper
+        %nav.foot-left
+          %ul
+            %li
+              %a{:href => "#"} Пользовательское соглашение
+            %li
+              %a{:href => "#"} Доставка и оплата
+            %li
+              %a{:href => "#"} Возврат и обмен товара
+        %div © 2012 The Furnish
+        %nav.foot-right
+          %ul
+            %li
+              %a{:href => "#"} Поставщикам
+            %li
+              %a{:href => "#"} Дизайнерам
