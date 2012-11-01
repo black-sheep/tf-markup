@@ -1,0 +1,227 @@
+<!doctype html>
+%html
+  %head
+    %title Furnish
+    %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:charset => "UTF-8"}/
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"}
+    :javascript
+      !window.jQuery && document.write(unescape('%3Cscript src="jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))    %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+    :javascript
+      !window.jQuery.ui && document.write(unescape('%3Cscript src="jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/slides.jquery.js"}
+    %script{:src => "js/funcs.js"}
+    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/jquery.mCustomScrollbar.js"}
+    %script{:src => "js/jcarousel.js", :type => "text/javascript"}
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if IE]
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %body{"data-ws" => "1065"}
+    .bonus
+      %a{:href => "#"} Дополнительные бонусы для Вас и Ваших друзей
+      %button Подробнее
+      %a.close-a{:href => "#"}
+    %header
+      %nav.top-nav
+        .wrapper
+          %ul
+            %li
+              %a{:href => "#"} О проекте
+            %li
+              %a{:href => "#"} Вопросы и ответы
+            %li
+              %a{:href => "#"} Контакты
+            %li
+              %a{:href => "#"}
+                %img{:src => "images/content/like.png"}/
+          %ul
+            %li
+              %a{:href => "#"} Выход
+            %li.bord-dot.basket
+              %a{:href => "#"}
+                %i
+                %span Корзина
+            %li.setting
+              %a{:href => "#"}
+            %li
+              Ваши баллы:
+              %span 2 600
+            %li.bord-dot.user-kab
+              %a{:href => "#"}
+                %i
+                %span Личный кабинет
+            %li.soc-li.vk
+              %a{:href => "#"}
+            %li.soc-li.fb
+              %a{:href => "#"}
+            %li.soc-li.tw
+              %a{:href => "#"}
+      .wrapper
+        .main-head
+          .alleft
+            .search-box
+              %span Поиск по сайту:
+              %div
+                %input{:type => "text"}/
+                %button
+            %nav.dop-menu
+              %ul
+                %li
+                  %i
+                  %a{:href => "#"} Выберите дизайнера
+                %li
+                  %i
+                  %a{:href => "#"} Консьерж-сервис
+                %li
+                  %i
+                  %a{:href => "#"} Блог о дизайне
+          .alcenter
+            %img{:alt => "", :src => "images/content/logo.png"}/
+          .alright
+            .phone
+              %span> 495
+              333-93-40
+            .town
+              %span Ваш город:
+              .purple
+                %a{:href => "#"}
+                  %span Москва
+                %i.arrow-down
+                %ul
+                  %li
+                    %a.active{:href => "#"} Москва
+                  %li
+                    %a{:href => "#"} Санкт-Петербург
+                  %li
+                    %a{:href => "#"} Ростов
+                  %li
+                    %a{:href => "#"} Калининград
+    .wrapper
+      .basket-page
+        .head-bsk
+          %h1 Корзина
+          %a.ret-shop{:href => "#"}
+            ←
+            %span Вернуться в магазин
+          %a.a-basket{:href => "#"}
+        %table.table-basket
+          %tbody
+            %tr
+              %th.tov-img Товар
+              %th Название
+              %th Цена
+              %th Кол-во
+              %th Итого
+              %th
+            %tr.name-razdel
+              %td{:colspan => "6"} Мезанин
+            %tr.tr-bord
+              %td.tov-img
+                %img{:alt => "", :src => "images/content/bs1.jpg"}/
+              %td.tov-op
+                %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
+                .tov-artik Артикул: 098766
+                .tov-artik Салон: Мезанин
+              %td.tov-price
+                %div 305 440 Р
+              %td.tov-colvo
+                .add-tovar
+                  %button.minus
+                    %i
+                  %input{:type => "text", :value => "2"}/
+                  %button.plus
+                    %i
+              %td.tov-itogo
+                %div 1 905 440 Р
+                .reserv Резерв в салоне
+              %td.close-td
+                %a{:href => "#"}
+            %tr.tr-bord
+              %td.tov-img
+                %img{:alt => "", :src => "images/content/bs1.jpg"}/
+              %td.tov-op
+                %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
+                .tov-artik Артикул: 098766
+                .tov-artik Салон: Мезанин
+              %td.tov-price
+                %div 30 440 Р
+              %td.tov-colvo
+                .add-tovar
+                  %button.minus
+                    %i
+                  %input{:type => "text", :value => "6"}/
+                  %button.plus
+                    %i
+              %td.tov-itogo
+                %div 60 440 Р
+                .reserv Резерв в салоне
+              %td.close-td
+                %a{:href => "#"}
+            %tr
+              %td{:colspan => "4"}
+              %td.poditog{:colspan => "2"} Итого: 1 996 020 Р
+            %tr.name-razdel
+              %td{:colspan => "6"} Furnish
+            %tr.tr-bord
+              %td.tov-img
+                %img{:alt => "", :src => "images/content/bs1.jpg"}/
+              %td.tov-op
+                %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
+                .tov-artik Артикул: 098766
+                .tov-artik Салон: Furnish
+              %td.tov-price
+                %div 305 440 Р
+              %td.tov-colvo
+                .add-tovar
+                  %button.minus
+                    %i
+                  %input{:type => "text", :value => "2"}/
+                  %button.plus
+                    %i
+              %td.tov-itogo
+                %div 1 905 440 Р
+                .reserv Резерв в салоне
+              %td.close-td
+                %a{:href => "#"}
+            %tr
+              %td{:colspan => "4"}
+              %td.poditog{:colspan => "2"} Итого: 1 996 020 Р
+            %tr.tr-last
+              %td{:colspan => "4"}
+                .points
+                  %a{:href => "#"} Пересчитать
+                  %div
+                    %input#ch1{:type => "checkbox"}/
+                    %label{:for => "ch1"} Использовать
+                  %div
+                    Ваши баллы
+                    %span 14 500
+              %td.all-itog{:colspan => "2"}
+                %div Сумма заказа,
+                %div
+                  %a{:href => "#"}> без учета доставки
+                  \: 2 310 880 Р
+        .garant-box
+          %div
+            Мы гарантируем, что проверим наличие выбранных товаров у наших поставщиков и свяжемся с Вами для подтверждения времени доставки
+            %span в течение 8 часов
+          %button Оформить заказ
+    %footer
+      .wrapper
+        %nav.foot-left
+          %ul
+            %li
+              %a{:href => "#"} Пользовательское соглашение
+            %li
+              %a{:href => "#"} Доставка и оплата
+            %li
+              %a{:href => "#"} Возврат и обмен товара
+        %div © 2012 The Furnish
+        %nav.foot-right
+          %ul
+            %li
+              %a{:href => "#"} Поставщикам
+            %li
+              %a{:href => "#"} Дизайнерам

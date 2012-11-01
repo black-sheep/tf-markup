@@ -101,6 +101,15 @@ $light-purple: #814ca9;
     border: 1px solid #4b3d7c;
     @include border-radius(4px);
 }
+@mixin big-button {
+    height: 53px;
+    color: $wh-bord;
+    font-size: $main-fs + 9;
+    background-position: 0 -1270px;
+    background-repeat: repeat-x;
+    border: 1px solid #4b3d7c;
+    @include border-radius(4px);
+}
 @mixin m-input {
     border: 1px solid #000;
     padding: 5px;
@@ -228,6 +237,13 @@ $light-purple: #814ca9;
     font-weight: bold;
   }
 }
+.a-basket {
+    width: 27px;
+    height: 28px;
+    @include base-i;
+    background-position: 0 -96px;
+  }
+.a-basket:hover { background-position: -27px -96px; }
 .alleft { text-align: left; }
 .alcenter { text-align: center; }
 .alright { text-align: right; }
@@ -248,6 +264,40 @@ $light-purple: #814ca9;
     background-position: -45px -777px;
     top: 20px;
     right: 20px;
+  }
+}
+.add-tovar {
+  float: right;
+  button {
+    float: left;
+    width: 23px;
+    padding: 0;
+    @include small-button;
+    i { @include base-i; }
+  }
+  input {
+    @include m-input;
+    float: left;
+    padding: 3px;
+    height: 16px;
+    width: 34px;
+    margin: 0 10px;
+  }
+  .minus {
+    i {
+      width: 12px;
+      height: 5px;
+      background-position: -41px -1008px;
+      margin-top: 6px;
+    }
+  }
+  .plus {
+    i {
+      width: 12px;
+      height: 13px;
+      background-position: -41px -1014px;
+      margin-top: 2px;
+    }
   }
 }
 body { background: #fff; font-family: Arial, sans-serif;
@@ -1529,15 +1579,8 @@ footer {
     button { padding-left: 27px; padding-right: 27px; }
   }
   .a-basket {
-    width: 27px;
-    height: 28px;
-    @include base-i;
-    background-position: 0 -96px;
     position: absolute;
-    right: 34px;
-    top: 39px;
   }
-  .a-basket:hover { background-position: -27px -96px; }
   .return-box {
     width: 514px;
     padding-top: 18px;
@@ -1865,40 +1908,6 @@ footer {
           }
           .pr-r {
             @include span-columns(3 omega,6);
-            .add-tovar {
-              float: right;
-              button {
-                float: left;
-                width: 23px;
-                padding: 0;
-                @include small-button;
-                i { @include base-i; }
-              }
-              input {
-                @include m-input;
-                float: left;
-                padding: 3px;
-                height: 16px;
-                width: 34px;
-                margin: 0 10px;
-              }
-              .minus {
-                i {
-                  width: 12px;
-                  height: 5px;
-                  background-position: -41px -1008px;
-                  margin-top: 6px;
-                }
-              }
-              .plus {
-                i {
-                  width: 12px;
-                  height: 13px;
-                  background-position: -41px -1014px;
-                  margin-top: 2px;
-                }
-              }
-            }
             .add-basket {
               @include medium-button;
               height: 30px;
@@ -2544,6 +2553,194 @@ footer {
     }
 }
 
-
+.basket-page {
+    padding-top: 25px;
+    padding-bottom: 150px;
+    .head-bsk {
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: 23px;
+        h1 {
+            float: left;
+            font-size: 28px;
+        }
+        .ret-shop {
+            margin-top: 7px;
+            margin-left: 69px;
+            float: left;
+            font-size: $main-fs - 1;
+            font-family: $font-arial;
+            color: $main-color;
+            text-decoration: none;
+            span { border-bottom: 1px solid $main-color; }
+        }
+        .ret-shop:hover {
+            span { border-color: $wh-bord; }
+        }
+        .a-basket {
+            float: right;
+            margin-top: 4px;
+            margin-right: 16px;
+        }
+    }
+    .table-basket {
+        width: 100%;
+        margin-top: 19px;
+        th {
+            color: $main-color;
+            font-size: $main-fs + 2;
+            font-weight: bold;
+            font-family: $font-arial;
+            padding-top: 19px;
+            padding-bottom: 19px;
+        }
+        .tr-bord {
+            border-bottom: 1px solid $light-gray;
+        }
+        .name-razdel {
+            color: $wh-bord;
+            td {
+                font-size: $main-fs + 2;
+                font-weight: bold;
+                font-family: $font-arial;
+                background: $s-bord;
+                text-align: center;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+        }
+        .tov-img {
+            padding: 21px 30px 21px 10px;
+            width: 125px;
+            img { border: 1px solid $light-gray; }
+        }
+        .tov-op {
+            vertical-align: top;
+            padding-top: 31px;
+            padding-right: 20px;
+            a {
+                color: $main-color;
+                font-size: $main-fs + 2;
+                display: inline-block;
+                margin-bottom: 17px;
+            }
+            a:hover {
+                color: $s-bord;
+                text-decoration: underline !important;
+            }
+            .tov-artik {
+                font-size: $main-fs + 2;
+                color: #919191;
+                padding-bottom: 7px;
+            }
+        }
+        .tov-price {
+            padding-top: 60px;
+            vertical-align: top;
+            width: 155px;
+            padding-right: 20px;
+            font-weight: bold;
+            font-size: $main-fs + 7;
+            color: $main-color;
+        }
+        .tov-colvo {
+            padding-top: 60px;
+            vertical-align: top;
+            width: 155px;
+            padding-right: 20px;
+            .add-tovar {
+                float: none;
+                input { text-align: center; }
+            }
+        }
+        .tov-itogo {
+            vertical-align: top;
+            padding-top: 60px;
+            padding-right: 20px;
+            font-weight: bold;
+            font-size: $main-fs + 7;
+            color: $main-color;
+            .reserv {
+                color: #7448c5;
+                font-style: italic;
+                font-size: $main-fs + 1;
+                font-weight: normal;
+                padding-top: 15px;
+            }
+        }
+        .close-td {
+            vertical-align: top;
+            padding-top: 60px;
+            padding-right: 30px;
+            width: 15px;
+            a {
+                @include base-i;
+                width: 14px;
+                height: 14px;
+                background-position: -24px -1241px;
+            }
+        }
+        .poditog {
+            padding-top: 14px;
+            padding-bottom: 35px;
+            color: #7448c5;
+            font-size: $main-fs + 7;
+        }
+        .tr-last {
+            background: $light-gray;
+            font-size: $main-fs + 1;
+            color: $main-color;
+            line-height: 25px;
+            padding-bottom: 3px;
+            .points {
+                padding-right: 12%;
+                text-align: right;
+                line-height: 14px;
+                div {
+                    float: right;
+                    margin-right: 35px;
+                    span { font-weight: bold; }
+                    input { margin-top: 0; }
+                }
+                a {
+                    float: right;
+                    color: $s-bord;
+                }
+            }
+            .all-itog {
+                color: #7a03d5;
+                font-size: $main-fs + 7;
+                font-weight: bold;
+                padding-bottom: 16px;
+                padding-top: 11px;
+                a {
+                    color: #7a03d5;
+                    text-decoration: none;
+                    border-bottom: 2px dotted #7a03d5;
+                }
+                a:hover { border-color: $wh-bord; }
+            }
+        }
+    }
+    .garant-box {
+        div {
+            float: left;
+            margin-left: 20px;
+            font-size: $main-fs + 1;
+            color: #a8a8a8;
+            width: 340px;
+            line-height: 22px;
+            padding-top: 14px;
+            span { font-weight: bold; }
+        }
+        button {
+            float: right;
+            @include big-button;
+            padding-right: 19px;
+            padding-left: 19px;
+            margin-top: 21px;
+            margin-right: 12px;
+        }
+    }
+}
 
 
