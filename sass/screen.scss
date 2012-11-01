@@ -688,9 +688,13 @@ label { cursor: pointer; }
       position: relative;
       a, i {
         position: relative;
-        z-index: 11;
       }
       a:hover { color: $main-color; }
+    }
+    .hidden-ul.posv {
+      a, i {
+        z-index: 11;
+      }
     }
     li.last {
         @include span-columns(1 omega,19);
@@ -1501,6 +1505,15 @@ footer {
                     float: left;
                     margin-right: 6px;
                     margin-bottom: 9px;
+                    a {
+                      display: block;
+                      height: 21px;
+                      cursor: pointer;
+                    }
+                    a.active {
+                      border: 1px solid $s-bord;
+                      height: 19px;
+                    }
                 }
                 li.c1 { background-position: 0 -846px; }
                 li.c2 { background-position: -23px -846px; }
@@ -2212,6 +2225,7 @@ footer {
         margin-bottom: 38px;
         div {
           position: absolute;
+          display: none;;
           width: 242px;
           bottom: 4px;
           height: 50px;
@@ -2293,6 +2307,9 @@ footer {
       }
     }
     .otm-li {
+      .img-box {
+        div { display: block; }
+      }
       .name-tovar { color: $s-bord; }
     }
   }

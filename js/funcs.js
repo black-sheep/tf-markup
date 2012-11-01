@@ -11,15 +11,26 @@ $(document).ready(function()
     $('.close-a').click(function(){
         $(this).parent().hide();
     });
+    $('.color a').click(function(){
+        $('.color a').removeClass('active');
+        $(this).addClass('active');
+    });
     $(".purple").mouseover(function(){
         $(this).find('ul').show();
     }).mouseout(function(){
             $(this).find('ul').hide();
         });
+    $(".catalog-tovar .img-box").mouseover(function(){
+        $(this).parent().addClass('otm-li');
+    }).mouseout(function(){
+            $(this).parent().removeClass('otm-li');
+        });
     $(".hidden-ul").mouseover(function(){
         $(this).find('ul').show();
+        $(this).addClass('posv');
     }).mouseout(function(){
             $(this).find('ul').hide();
+            $(this).removeClass('posv');
         });
     $(".search-box div").mouseover(function(){
         $(this).addClass('hover');
