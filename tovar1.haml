@@ -204,7 +204,7 @@
         %div
           .left-select
             .box-sel
-              %span.name-op Раздел
+              %label Раздел
               %select
                 %option 1
                 %option 2
@@ -212,7 +212,7 @@
                 %option 4
                 %option 5
             .box-sel
-              %span.name-op Тип
+              %label Тип
               %select
                 %option 1
                 %option 2
@@ -220,7 +220,7 @@
                 %option 4
                 %option 5
             .box-sel
-              %span.name-op Фабрика производитель
+              %label Фабрика производитель
               %select
                 %option 1
                 %option 2
@@ -228,7 +228,7 @@
                 %option 4
                 %option 5
             .box-sel
-              %span.name-op Бренд
+              %label Бренд
               %select
                 %option 1
                 %option 2
@@ -236,7 +236,7 @@
                 %option 4
                 %option 5
             .box-sel
-              %span.name-op Страна производитель
+              %label Страна производитель
               %select
                 %option 1
                 %option 2
@@ -244,7 +244,7 @@
                 %option 4
                 %option 5
             .box-sel
-              %span.name-op Стиль
+              %label Стиль
               %select
                 %option 1
                 %option 2
@@ -252,7 +252,7 @@
                 %option 4
                 %option 5
             .box-sel
-              %span.name-op Наименование
+              %label Наименование
               %select
                 %option 1
                 %option 2
@@ -260,7 +260,7 @@
                 %option 4
                 %option 5
           .center-opisanie
-            %span.name-op Описание товара:
+            %label Описание товара:
             %form
               %div
                 %ul
@@ -280,7 +280,7 @@
                     %a{:href => "#"}
               %textarea
             .load-file
-              %span.name-op Загрузить фотографии
+              %label Загрузить фотографии
               %div
                 %input{:type => "text"}/
                 %button Обзор
@@ -308,7 +308,7 @@
                   %input#r3{:type => "radio"}/
                   %label{:for => "r3"} Сделать главным
           .right-comm
-            %span.name-op Комментарий администратору:
+            %label Комментарий администратору:
             %textarea
         .col-btn
           .left-select
@@ -323,14 +323,14 @@
               %input#r4{:type => "radio"}/
               %label{:for => "r4"} Сделать вариантом по умолчанию
             .box-sel
-              %span.name-op Название материала
+              %label Название материала
               %input{:type => "text"}/
             .box-sel
-              %span.name-op Материал
+              %label Материал
               %input{:type => "text"}/
           .artikul
             .box-sel
-              %span.name-op Артикул
+              %label Артикул
               %input{:type => "text"}/
             .box-sel
               .add-b
@@ -344,33 +344,33 @@
                 %option 5
             %div
               .col-vo.box-sel
-                %span.name-op Количество
+                %label Количество
                 %input{:type => "text"}/
               .date-p.box-sel
-                %span.name-op Дата поступления
+                %label Дата поступления
                 %input{:type => "text"}/
           .parametr
             .box-sel
-              %span.name-op Длина
+              %label Длина
               %input{:type => "text"}/
             .box-sel
-              %span.name-op Ширина
+              %label Ширина
               %input{:type => "text"}/
             .box-sel
-              %span.name-op Высота
+              %label Высота
               %input{:type => "text"}/
           .price
             .box-sel
-              %span.name-op Цена старая
+              %label Цена старая
               %input{:type => "text"}/
             .box-sel
-              %span.name-op Цена новая
+              %label Цена новая
               %input{:type => "text"}/
             .box-sel
-              %span.name-op Рекомендованная цена
+              %label Рекомендованная цена
               %input{:type => "text"}/
           .color
-            %span.name-op Цвета
+            %label Цвета
             %ul
               %li.c1
                 %a
@@ -399,7 +399,7 @@
               %li.c13
                 %a
         .load-file
-          %span.name-op Загрузить фотографии в разных ракурсах
+          %label Загрузить фотографии в разных ракурсах
           %div
             %input{:type => "text"}/
             %button Обзор

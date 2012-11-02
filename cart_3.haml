@@ -208,19 +208,19 @@
               .box-b-z
                 %h3 Информация для доставки
                 .box-sel
-                  %span.name-op ФИО *
+                  %label ФИО *
                   %input{:type => "text", :value => ""}/
                 .box-sel
-                  %span.name-op Телефон *
+                  %label Телефон *
                   %input{:type => "text", :value => ""}/
                 .box-sel
-                  %span.name-op Индекс
+                  %label Индекс
                   %input{:type => "text", :value => ""}/
                 .box-sel
-                  %span.name-op Город *
+                  %label Город *
                   %input{:type => "text", :value => ""}/
                 .box-sel
-                  %span.name-op Адрес доставки *
+                  %label Адрес доставки *
                   %select
                     %option 1
                     %option 2
@@ -229,7 +229,7 @@
                     %option 5
             .right-z
               .box-sel
-                %span.name-op Комментарий
+                %label Комментарий
                 %textarea
           %div
             .left-z
@@ -254,19 +254,19 @@
               .box-b-z
                 %h3 Оплата по карте
                 .box-sel
-                  %span.name-op Имя (как на карте) *
+                  %label Имя (как на карте) *
                   %input{:type => "text", :value => ""}/
                 .box-sel
-                  %span.name-op Номер карты *
+                  %label Номер карты *
                   %input{:type => "text", :value => ""}/
                 .card-data
                   .box-sel
-                    %span.name-op Истечение срока карты *
+                    %label Истечение срока карты *
                     %input.xxs-inp{:type => "text", :value => ""}/
                     %ins /
                     %input.xs-inp{:type => "text", :value => ""}/
                   .box-sel
-                    %span.name-op CVV код *
+                    %label CVV код *
                     %input.xxs-inp{:type => "text", :value => ""}/
         .center-purple-btn
           %button Подтвердить заказ

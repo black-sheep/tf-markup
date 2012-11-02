@@ -320,7 +320,6 @@ h2 {
     padding-bottom: 5px;
 }
 button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
-label { cursor: pointer; }
 .wrapper {  @include width-el; @include clearfix; }
 .box-hor-dot {
   border-bottom: 1px solid $light-gray;
@@ -524,6 +523,13 @@ label { cursor: pointer; }
     .name-op { font-size: $main-fs - 1 !important; }
     .load-file {
         input { width: 229px !important; }
+        label {
+            font-size: $main-fs;
+            color: $main-color;
+            display: block;
+            font-family: $font-arial;
+            padding-bottom: 10px;
+        }
     }
     .default { padding-bottom: 34px !important; }
   .left-t {
@@ -712,8 +718,8 @@ label { cursor: pointer; }
   z-index: 10;
   top: -26px;
   left: -23px;
-  width: 945px;
-  padding: 84px 15px 25px 41px;
+  width: 960px;
+  padding: 84px 0 25px 41px;
   li {
     text-align: left;
     padding-bottom: 10px;
@@ -1243,6 +1249,13 @@ footer {
       input.xs-inp { width: 66px !important; }
       input.xxs-inp { width: 44px !important; }
       ins { text-decoration: none; padding: 0 7px; }
+      label {
+        font-size: $main-fs;
+        color: $main-color;
+        display: block;
+        font-family: $font-arial;
+        padding-bottom: 10px;
+    }
     }
   .card-data {
     .box-sel {
@@ -1276,6 +1289,13 @@ footer {
             border-color: #2e475e;
             margin-right: 0;
         }
+        label {
+            font-size: $main-fs;
+            color: $main-color;
+            display: block;
+            font-family: $font-arial;
+            padding-bottom: 10px;
+        }
     }
     .prev-box {
         float: left;
@@ -1300,11 +1320,12 @@ footer {
         label {
             float: left;
             margin-top: 10px;
-            font-size: $main-fs - 2;
+            font-size: $main-fs - 2 !important;
             font-family: $font-arial;
             color: $main-color;
             white-space: nowrap;
             margin-right: -17px;
+            padding-bottom: 0;
         }
         input {
             float: left;
@@ -1316,6 +1337,13 @@ footer {
     }
     .center-opisanie {
         @include span-columns(6,10);
+        label {
+            font-size: $main-fs;
+            color: $main-color;
+            display: block;
+            font-family: $font-arial;
+            padding-bottom: 10px;
+        }
         form {
             border: 1px solid $main-color;
             div {
@@ -1400,6 +1428,13 @@ footer {
             height: 222px;
             border: 1px solid $main-color;
             font-family: $font-arial;
+        }
+        label {
+            font-size: $main-fs;
+            color: $main-color;
+            display: block;
+            font-family: $font-arial;
+            padding-bottom: 10px;
         }
     }
     .col-btn {
@@ -1496,6 +1531,13 @@ footer {
         }
         .color {
             @include span-columns(2 omega,12);
+            label {
+                font-size: $main-fs;
+                color: $main-color;
+                display: block;
+                font-family: $font-arial;
+                padding-bottom: 10px;
+            }
             width: 12%;
             ul {
                 li {
@@ -1593,6 +1635,8 @@ footer {
   }
   .a-basket {
     position: absolute;
+    top: 26px;
+    right: 35px;
   }
   .return-box {
     width: 514px;
