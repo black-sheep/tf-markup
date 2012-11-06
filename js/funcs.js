@@ -1,6 +1,10 @@
 
 $(document).ready(function()
 {
+    $(".content").mCustomScrollbar({
+        scrollEasing:"easeOutQuint",
+        autoDraggerLength:false
+    });
     $('.mycarousel').jcarousel();
     $("ul").each(function(){
         $(this).find('li:last').addClass('last');
@@ -119,12 +123,7 @@ $(window).load(function(){
     var mh;
     mh = $('.clm-right').height();
     $('.scroll-pane').height(mh);
-    $(".content").mCustomScrollbar({
-        scrollInertia:0
-    });
-    $(".callback_demo a[rel='scrollto-bottom']").click(function(e){
-        e.preventDefault();
-    });
+
     $(".content_1").mCustomScrollbar({
         horizontalScroll:true,
         advanced:{

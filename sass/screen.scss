@@ -237,6 +237,13 @@ $light-purple: #814ca9;
     font-weight: bold;
   }
 }
+.label {
+  font-size: $main-fs;
+  color: $main-color;
+  display: block;
+  font-family: $font-arial;
+  padding-bottom: 10px;
+}
 .a-basket {
     width: 27px;
     height: 28px;
@@ -520,16 +527,13 @@ button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
     .main-menu {
         a { font-size: $main-fs + 3; }
     }
-    .name-op { font-size: $main-fs - 1 !important; }
+    .name-op {
+      @extend .label;
+      font-size: $main-fs - 1 !important;
+    }
     .load-file {
         input { width: 229px !important; }
-        label {
-            font-size: $main-fs;
-            color: $main-color;
-            display: block;
-            font-family: $font-arial;
-            padding-bottom: 10px;
-        }
+        label { @extend .label; }
     }
     .default { padding-bottom: 34px !important; }
   .left-t {
@@ -818,7 +822,7 @@ button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
           .caption {
               z-index:500;
               position:absolute;
-              bottom:-35px;
+              bottom: 0.001% !important;
               left:0;
               height: 73px;
               padding: 29px 0 20px 0;
@@ -905,12 +909,14 @@ button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
     .add-a:hover { background-position: 0 -208px; }
 }
 .nice-img {
-   padding-top: 40px;
-   div {
-     @include span-columns(4,12);
-   }
-  div.last {
-    @include span-columns(4 omega,12);
+  margin-left: -1.2% !important;
+  padding-top: 40px;
+  text-align: center;
+  div {
+    display: inline-block;
+    width: 31%;
+    margin-right: 0 !important;
+    margin-left: 1.2% !important;
   }
   .base-info {
     padding: 5px;
@@ -1225,13 +1231,6 @@ footer {
       text-align: center;
       font-size: $main-fs + 15;
     }
-    .name-op {
-        font-size: $main-fs;
-        color: $main-color;
-        display: block;
-        font-family: $font-arial;
-        padding-bottom: 10px;
-    }
     .box-sel {
         padding-bottom: 12px;
         select {
@@ -1249,13 +1248,7 @@ footer {
       input.xs-inp { width: 66px !important; }
       input.xxs-inp { width: 44px !important; }
       ins { text-decoration: none; padding: 0 7px; }
-      label {
-        font-size: $main-fs;
-        color: $main-color;
-        display: block;
-        font-family: $font-arial;
-        padding-bottom: 10px;
-    }
+      label { @extend .label; }
     }
   .card-data {
     .box-sel {
@@ -1289,13 +1282,7 @@ footer {
             border-color: #2e475e;
             margin-right: 0;
         }
-        label {
-            font-size: $main-fs;
-            color: $main-color;
-            display: block;
-            font-family: $font-arial;
-            padding-bottom: 10px;
-        }
+      label { @extend .label; }
     }
     .prev-box {
         float: left;
@@ -1337,14 +1324,8 @@ footer {
     }
     .center-opisanie {
         @include span-columns(6,10);
-        label {
-            font-size: $main-fs;
-            color: $main-color;
-            display: block;
-            font-family: $font-arial;
-            padding-bottom: 10px;
-        }
-        form {
+        label { @extend .label; }
+        .mes-form {
             border: 1px solid $main-color;
             div {
                 border-bottom: 1px solid $main-color;
@@ -1429,13 +1410,7 @@ footer {
             border: 1px solid $main-color;
             font-family: $font-arial;
         }
-        label {
-            font-size: $main-fs;
-            color: $main-color;
-            display: block;
-            font-family: $font-arial;
-            padding-bottom: 10px;
-        }
+      label { @extend .label; }
     }
     .col-btn {
         margin-top: 39px;
@@ -1496,6 +1471,7 @@ footer {
                 input {
                     float: left;
                     margin: 1px 5px 0 0;
+                  padding: 0 !important;
                 }
                 label {
                     float: left;
@@ -1512,7 +1488,11 @@ footer {
                 input {
                     float: left;
                     width: auto;
-                    margin: 0 4px 0 0;
+                    margin: 0 4px 0 0 !important;
+                  border: none !important;
+                  padding-top: 0 !important;
+                  padding-bottom: 0 !important;
+
                 }
                 span { float: left; }
                 padding-bottom: 2px;
@@ -1531,13 +1511,7 @@ footer {
         }
         .color {
             @include span-columns(2 omega,12);
-            label {
-                font-size: $main-fs;
-                color: $main-color;
-                display: block;
-                font-family: $font-arial;
-                padding-bottom: 10px;
-            }
+          label { @extend .label; }
             width: 12%;
             ul {
                 li {
@@ -1706,16 +1680,21 @@ footer {
                 .mCSB_container {
                     width: auto;
                     overflow: hidden;
-                    ul { padding-bottom: 0; }
+                    ul { padding-bottom: 10px; }
                 }
                 .mCSB_container.mCS_no_scrollbar{
                     margin-right:0;
                 }
                 .mCSB_scrollTools{
-                    width:18px;
-                    height:100%;
-                    top:0;
-                    right:0;
+                  width: 18px;
+                  height: 243px;
+                  padding: 10px 0;
+                  -webkit-box-sizing:border-box;
+                  -moz-box-sizing:border-box;
+                  box-sizing:border-box;
+                  top: 0;
+                  margin-top: -10px;
+                  right: 0;
                     .mCSB_draggerContainer{
                         height:100%;
                         -webkit-box-sizing:border-box;
@@ -1723,21 +1702,21 @@ footer {
                         box-sizing:border-box;
                         .mCSB_dragger{
                             width: 100%;
-                            height: 59px !important;
+                            height: 59px;
+                            background: {
+                                image: $back-img;
+                                position: 0 -993px;
+                                repeat: no-repeat;
+                            }
+                            cursor: pointer;
                             .mCSB_dragger_bar {
-                                height: 59px;
-                                background: {
-                                    image: $back-img;
-                                    repet: no-repeat;
-                                    position: 0 -993px;
-                                }
                                 width: 18px;
                                 cursor: pointer;
                             }
                         }
                         .mCSB_draggerRail{
                             width: 1px;
-                            height:100%;
+                            height: 100%;
                             margin:0 auto;
                             background: #dcdcdb;
                         }
@@ -1964,7 +1943,8 @@ footer {
             }
           }
           .pr-r {
-            @include span-columns(3 omega,6);
+            @include span-columns(2 omega,6);
+            width: 120px !important;
             .add-basket {
               @include medium-button;
               height: 30px;
@@ -2324,7 +2304,8 @@ footer {
       }
       .name-tovar:hover { border-color: $wh-bord; }
       .artic-tovar {
-        padding-top: 2px;
+        display: block;
+        padding-top: 4px;
         display: block;
         font-size: $main-fs - 2;
         font-family: $font-arial;
@@ -2504,10 +2485,15 @@ footer {
         margin-right:0;
       }
       .mCSB_scrollTools{
-        width:18px;
-        height:100%;
-        top:0;
-        right:0;
+        width: 18px;
+        height: 310px;
+        padding: 10px 0;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        top: 0;
+        margin-top: -10px;
+        right: 0;
         .mCSB_draggerContainer{
           height:100%;
           -webkit-box-sizing:border-box;
@@ -2515,14 +2501,14 @@ footer {
           box-sizing:border-box;
           .mCSB_dragger{
             width: 100%;
-            height: 59px !important;
+            height: 59px;
+            background: {
+              image: $back-img;
+              repet: no-repeat;
+              position: 0 -993px;
+            }
+            cursor: pointer;
             .mCSB_dragger_bar {
-              height: 59px;
-              background: {
-                image: $back-img;
-                repet: no-repeat;
-                position: 0 -993px;
-              }
               width: 18px;
               cursor: pointer;
             }
