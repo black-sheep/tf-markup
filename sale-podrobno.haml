@@ -1,0 +1,347 @@
+<!doctype html>
+%html
+  %head
+    %title Furnish
+    %link{:href => "stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:charset => "UTF-8"}/
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"}
+    :javascript
+      !window.jQuery && document.write(unescape('%3Cscript src="jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))    %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
+    :javascript
+      !window.jQuery.ui && document.write(unescape('%3Cscript src="jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/slides.jquery.js"}
+    %script{:src => "js/funcs.js"}
+    %script{:src => "js/jquery.mousewheel.min.js"}
+    %script{:src => "js/jquery.mCustomScrollbar.js"}
+    %script{:src => "js/jcarousel.js", :type => "text/javascript"}
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    /[if IE]
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %body{"data-ws" => "1065"}
+    .bonus
+      %a{:href => "#"} Дополнительные бонусы для Вас и Ваших друзей
+      %button Подробнее
+      %a.close-a{:href => "#"}
+    %header
+      %nav.top-nav
+        .wrapper
+          %ul
+            %li
+              %a{:href => "#"} О проекте
+            %li
+              %a{:href => "#"} Вопросы и ответы
+            %li
+              %a{:href => "#"} Контакты
+            %li
+              %a{:href => "#"}
+                %img{:src => "images/content/like.png"}/
+          %ul
+            %li
+              %a{:href => "#"} Выход
+            %li.bord-dot.basket
+              %a{:href => "#"}
+                %i
+                %span Корзина
+            %li.setting.active
+              %a{:href => "#"}
+            %li
+              Ваши баллы:
+              %span 2 600
+            %li.bord-dot.user-kab.active
+              %a{:href => "#"}
+                %i
+                %span Личный кабинет
+            %li.soc-li.vk
+              %a{:href => "#"}
+            %li.soc-li.fb
+              %a{:href => "#"}
+            %li.soc-li.tw
+              %a{:href => "#"}
+      .wrapper
+        .main-head
+          .alleft
+            .search-box
+              %span Поиск по сайту:
+              %div
+                %input{:type => "text"}/
+                %button
+            %nav.dop-menu
+              %ul
+                %li
+                  %i
+                  %a{:href => "#"} Выберите дизайнера
+                %li
+                  %i
+                  %a{:href => "#"} Консьерж-сервис
+                %li
+                  %i
+                  %a{:href => "#"} Блог о дизайне
+          .alcenter
+            %img{:alt => "", :src => "images/content/logo.png"}/
+          .alright
+            .phone
+              %span> 495
+              333-93-40
+            .town
+              %span Ваш город:
+              .purple
+                %a{:href => "#"}
+                  %span Москва
+                %i.arrow-down
+                %ul
+                  %li
+                    %a.active{:href => "#"} Москва
+                  %li
+                    %a{:href => "#"} Санкт-Петербург
+                  %li
+                    %a{:href => "#"} Ростов
+                  %li
+                    %a{:href => "#"} Калининград
+        %nav.main-menu
+          %ul
+            %li.hidden-ul
+              %a{:href => "#"} Мебель и обстановка
+              %i.arrow-down
+              %ul.hide-ul{"data-left" => "41"}
+                %li
+                  %h4 Мебель
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Диваны
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла
+                    %li
+                      %i
+                      %a{:href => "#"} Кровати
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                    %li
+                      %i
+                      %a{:href => "#"} Шкафы и комоды
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Стулья
+                %li
+                  %h4 Мебельные аксессуары
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Журнальные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Этажерки
+                    %li
+                      %i
+                      %a{:href => "#"} Стеллажи и полки
+                    %li
+                      %i
+                      %a{:href => "#"} Ширмы
+                    %li
+                      %i
+                      %a{:href => "#"} Вешалки для прихожей
+                    %li
+                      %i
+                      %a{:href => "#"} Сервировочные столики
+                    %li
+                      %i
+                      %a{:href => "#"} Газетницы
+                %li
+                  %h4 Мебель для кабинетов
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Столы
+                    %li
+                      %i
+                      %a{:href => "#"} Кресла и стулья
+                    %li
+                      %i
+                      %a{:href => "#"} Системы хранения (шкафы, полки)
+                    %li
+                      %i
+                      %a{:href => "#"} Тумбочки
+                %li
+                  %h4 Свет
+                  %ul
+                    %li
+                      %i
+                      %a{:href => "#"} Напольные светильники
+                    %li
+                      %i
+                      %a{:href => "#"} Настольные светильники
+            %li
+              %a{:href => "#"} декор и аксессуары
+            %li
+              %a{:href => "#"} товары для детской
+            %li
+              %a{:href => "#"} здоровый образ жизни
+            %li
+              %a{:href => "#"} подарки для дома
+            %li
+              %a{:href => "#"} дизайнерские вещи
+            %li
+              %a{:href => "#"} sale
+        .crump
+          %ul
+            %li
+              %a{:href => "#"} Главная
+              %i
+            %li
+              %a{:href => "#"} Личный кабинет
+              %i
+            %li
+              %a{:href => "#"} Статистика продаж
+              %i
+            %li
+              %a{:href => "#"} Продажа подробно
+    .wrapper
+      .gray-cont.sale-page
+        %h2 продажа подробно
+        .sale-box
+          %table
+            %tbody
+              %tr
+                %th Заказ №7 от 10.04.2013 17:34:59
+                %th
+              %tr
+                %td.bold-gray.first-td Текущий статус заказа:
+                %td
+                  %select.sel1
+                    %option{:value => "0"} Отгружен
+                    %option{:value => "1"} Отгружен
+                    %option{:value => "2"} Отгружен
+                    %option{:value => "3"} Отгружен
+                    %option{:value => "4"} Отгружен
+                  %select.sel2
+                    %option{:value => "0"} День
+                    %option{:value => "1"} 1
+                    %option{:value => "2"} 2
+                    %option{:value => "3"} 3
+                    %option{:value => "4"} 4
+                  %select.sel3
+                    %option{:value => "0"} Месяц
+                    %option{:value => "1"} 1
+                    %option{:value => "2"} 2
+                    %option{:value => "3"} 3
+                    %option{:value => "4"} 4
+                  %select.sel2
+                    %option{:value => "0"} Год
+                    %option{:value => "1"} 1
+                    %option{:value => "2"} 2
+                    %option{:value => "3"} 3
+                    %option{:value => "4"} 4
+              %tr
+                %td.bold-gray.first-td Состояние оплаты:
+                %td
+                  %select.sel1
+                    %option{:value => "0"} Оплачен
+                    %option{:value => "1"} 1
+                    %option{:value => "2"} 2
+                    %option{:value => "3"} 3
+                    %option{:value => "4"} 4
+              %tr
+                %td.bold-gray.first-td Сумма заказа:
+                %td 3 860 654 руб
+              %tr
+                %td.bold-gray.first-td Отменен:
+                %td
+                  %span.padr10 нет
+                  %a{:href => "#"} Отменить
+          %table
+            %tbody
+              %tr
+                %th Содержимое заказа:
+                %th
+                %th
+                %th
+              %tr
+                %td.first-td
+                  %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
+                  .tov-artik Артикул: 098766
+                  .tov-artik Салон: Мезанин
+                %td.tov-price 305 440 Р
+                %td.tov-price 6шт
+                %td.tov-price
+                  1 905 440 Р
+                  .reserv Резерв в салоне
+              %tr
+                %td.first-td
+                  %a{:href => "#"} Серьги «Итомида» со стразами Сваровски
+                  .tov-artik Артикул: 098766
+                  .tov-artik Салон: Мезанин
+                %td.tov-price 305 440 Р
+                %td.tov-price.tov-colvo 6шт
+                %td.tov-price.tov-itogo
+                  1 905 440 Р
+                  .reserv Резерв в салоне
+          .itog-box
+            %div
+              %span Цена:
+              %ins 3 860 654 руб
+            %div
+              %span Стоимость доставки:
+              %ins 500 руб
+            %div
+              %span Итого:
+              %ins 3 861 154  руб
+          %table
+            %tbody
+              %tr
+                %th Параметры заказа
+                %th
+              %tr
+                %td.bold-gray.first-td Ф.И.О.:
+                %td Сергей Кузнецов
+              %tr
+                %td.bold-gray.first-td E-mail адрес:
+                %td mail@mail.ru
+              %tr
+                %td.bold-gray.first-td Телефон:
+                %td 8-900-365-69-98
+              %tr
+                %td.bold-gray.first-td Индекс:
+                %td 432000
+              %tr
+                %td.bold-gray.first-td Город:
+                %td Москва
+              %tr
+                %td.bold-gray.first-td Адрес доставки:
+                %td ул. Камышинская, д.79, кв. 103
+          %table
+            %tbody
+              %tr
+                %th Оплата и доставка
+                %th
+              %tr
+                %td.bold-gray.first-td Платежная система:
+                %td Пластиковая карта
+              %tr
+                %td.bold-gray.first-td Оплачен:
+                %td Нет
+              %tr
+                %td.bold-gray.first-td Служба доставки:
+                %td Курьер Сервис Экпресс
+    %footer
+      .wrapper
+        %nav.foot-left
+          %ul
+            %li
+              %a{:href => "#"} Пользовательское соглашение
+            %li
+              %a{:href => "#"} Доставка и оплата
+            %li
+              %a{:href => "#"} Возврат и обмен товара
+        %div © 2012 The Furnish
+        %nav.foot-right
+          %ul
+            %li
+              %a{:href => "#"} Поставщикам
+            %li
+              %a{:href => "#"} Дизайнерам
