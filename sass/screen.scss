@@ -53,8 +53,7 @@ $light-purple: #814ca9;
       * html div { height: 1%; }
       }
 @mixin width-el {
-     min-width: 880px;
-     max-width: 1330px;
+     width: 1120px;
      padding: 0 10px;
      margin: 0 auto;
        }
@@ -98,7 +97,9 @@ $light-purple: #814ca9;
     font-size: $main-fs + 1;
     background-position: 0 -592px;
     background-repeat: repeat-x;
-    border: 1px solid #4b3d7c;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #4b3d7c;
     @include border-radius(4px);
 }
 @mixin big-button {
@@ -349,6 +350,10 @@ $light-purple: #814ca9;
     border-color: #2e475e;
     margin-right: 0;
 }
+.red-btn {
+  background-position: 0 -818px !important;
+  border-color: #c74f54 !important;
+}
 .pagination-box {
     border-top: 1px solid $light-gray;
     padding-top: 15px;
@@ -400,9 +405,101 @@ $light-purple: #814ca9;
         display: inline-block;
     }
 }
+.box-sel {
+  padding-bottom: 12px;
+  select {
+    width: 100%;
+    height: 22px;
+  }
+  input {
+    border: 1px solid $main-color;
+    width: 100%;
+    height: 16px;
+    text-indent: 5px;
+    padding: 3px 0;
+  }
+  input.s-inp { width: 143px !important; }
+  input.xs-inp { width: 66px !important; }
+  input.xxs-inp { width: 44px !important; }
+  ins { text-decoration: none; padding: 0 7px; }
+  label { @extend .label; }
+}
+.mes-form {
+  border: 1px solid $main-color;
+  div {
+    border-bottom: 1px solid $main-color;
+    ul {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      li {
+        float: left;
+        background-image: $back-img;
+        background-repeat: no-repeat;
+        a { display: block; }
+      }
+      li.vern {
+        margin-top: 4px;
+        margin-right: 20px;
+        width: 16px;
+        height: 12px;
+        background-position: 0 -279px;
+      }
+      li.i-bold {
+        margin-top: 2px;
+        margin-right: 23px;
+        width: 11px;
+        height: 14px;
+        background-position: -17px -279px;
+      }
+      li.i-ital {
+        margin-top: 1px;
+        margin-right: 22px;
+        width: 6px;
+        height: 14px;
+        background-position: -29px -279px;
+      }
+      li.i-list {
+        margin-top: 1px;
+        margin-right: 18px;
+        width: 16px;
+        height: 15px;
+        background-position: -34px -296px;
+      }
+      li.i-link {
+        margin-right: 17px;
+        width: 16px;
+        height: 16px;
+        background-position: -37px -279px;
+      }
+      li.i-img {
+        margin-top: 1px;
+        margin-right: 17px;
+        width: 16px;
+        height: 15px;
+        background-position: 0 -296px;
+      }
+      li.i-mov {
+        width: 16px;
+        height: 16px;
+        background-position: -17px -296px;
+      }
+    }
+  }
+  textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    padding: 10px 0;
+    text-indent: 10px;
+    height: 185px;
+    font-family: $font-arial;
+  }
+}
+.gray-td { background: #f9f9f9; }
 body { background: #fff; font-family: Arial, sans-serif;
   color: $main-color; font-size: $main-fs;
-  position: relative;
+  position: relative; min-width: 1140px;
 }
 a:hover, a:hover span { text-decoration: none !important; border-bottom: none; }
 h1 {
@@ -423,6 +520,10 @@ button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
 .wrapper {  @include width-el; @include clearfix; }
 .box-hor-dot {
   border-bottom: 1px solid $light-gray;
+  padding-bottom: 36px;
+  margin-bottom: 32px;
+}
+.box-no-dot {
   padding-bottom: 36px;
   margin-bottom: 32px;
 }
@@ -593,48 +694,6 @@ button { background-image: $back-img; cursor: pointer; white-space: nowrap; }
           }
           li:first-child { margin-left: 0; }
         }
-}
-.small-nav {
-    .top-nav {
-        ul { @include span-columns(19 omega,30); }
-        li {
-            font-size: $main-fs;
-            a { font-size: $main-fs; }
-            }
-            li { margin-left: 1%; }
-            li.basket {
-              margin-left: 2% !important;
-
-            }
-            ul:first-child {
-                @include span-columns(11,30);
-                li {
-                    margin-left: 1.5%;
-                    margin-right: 0;
-                    float: left;
-                  }
-                  li:first-child { margin-left: 0; }
-                }
-    }
-    .main-menu {
-        a { font-size: $main-fs + 3; }
-    }
-    .name-op {
-      @extend .label;
-      font-size: $main-fs - 1 !important;
-    }
-    .load-file {
-        input { width: 229px !important; }
-        label { @extend .label; }
-    }
-    .default { padding-bottom: 34px !important; }
-  .left-t {
-    .left-t-cont {
-    .diapazon {
-        input { width: 39px; }
-      }
-    }
-  }
 }
 .arrow-down {
     @include base-i;
@@ -1121,12 +1180,12 @@ footer {
         color: #aeafac;
     }
     .foot-left {
-        @include span-columns(7,16);
-        li { margin-right: 6%; padding-bottom: 10px; }
+        @include span-columns(8,16);
+        li { margin-right: 5.8%; padding-bottom: 10px; }
         li.last { margin-right: 0; }
     }
     .foot-right {
-        @include span-columns(6 omega,16);
+        @include span-columns(5 omega,16);
         li {
             margin-left: 27px;
             float: right;
@@ -1304,7 +1363,7 @@ footer {
 /*tovar*/
 .gray-cont {
     margin-top: 30px;
-    padding: 39px 59px 40px 59px;
+    padding: 39px 56px 40px 56px;
     margin-bottom: 60px;
     background: #f9f9f9;
     position: relative;
@@ -1319,25 +1378,6 @@ footer {
     h2 {
       text-align: center;
       font-size: $main-fs + 15;
-    }
-    .box-sel {
-        padding-bottom: 12px;
-        select {
-             width: 100%;
-             height: 22px;
-         }
-         input {
-             border: 1px solid $main-color;
-             width: 100%;
-             height: 16px;
-             text-indent: 5px;
-             padding: 3px 0;
-        }
-      input.s-inp { width: 143px !important; }
-      input.xs-inp { width: 66px !important; }
-      input.xxs-inp { width: 44px !important; }
-      ins { text-decoration: none; padding: 0 7px; }
-      label { @extend .label; }
     }
   .card-data {
     .box-sel {
@@ -1862,7 +1902,8 @@ footer {
           height: 24px;
           line-height: 23px;
       }
-      .dop-i {
+    }
+    .dop-i {
         position: absolute;
         top: -4px;
         right: 0;
@@ -1871,13 +1912,12 @@ footer {
           width: auto;
         }
         label {
-          color: #a1a19f;
+          color: #979896;
           float: left;
           margin-top: 4px;
           margin-left: 2px;
         }
       }
-    }
     .left-t {
       @include span-columns(3,6);
       margin-top: 28px;
@@ -1886,29 +1926,71 @@ footer {
       @include span-columns(3 omega,6);
       margin-top: 28px;
     }
-    .comm-box {
-      label {
-        padding-bottom: 9px;
-        display: block;
+  }
+  .my-sett-company.my-sett {
+      .left-t, .righ-t {
+          margin-top: 0;
+          padding-bottom: 18px;
+          position: relative;
+          .blue-btn {
+            float: left;
+            margin-top: -2px;
+          }
       }
-      textarea {
-        border: 1px solid $main-color;
-        width: 465px;
-        padding: 5px;
-        height: 142px;
-        resize: none;
+      .left-t {
+        .type-user {
+          margin-top: 21px;
+          padding-bottom: 25px;
+        }
       }
-      button {
-        margin-right: 3px;
-        margin-top: 19px;
-        float: right;
-        @include medium-button;
-        height: 30px;
-        width: auto;
-        padding-left: 19px;
-        padding-right: 19px;
+      .type-user {
+          margin-top: 12px;
+          padding-bottom: 37px;
+          span {
+              font-weight: bold;
+              font-size: $main-fs;
+              display: block;
+              float: left;
+              margin-right: 15px;
+          }
+          input {
+              float: left;
+              margin-right: 7px;
+              margin-top: -1px;
+          }
+          label {
+              float: left;
+              margin-right: 15px;
+              cursor: pointer;
+          }
       }
-    }
+      button { 
+          float: right;
+          margin-top: -11px;
+          @include medium-button;
+          height: 30px;
+          width: auto;
+          padding-left: 19px;
+          padding-right: 19px;
+          padding-bottom: 3px;
+      }
+      .dop-param {
+          h3 { float: left; }
+      }
+      .dop-i {
+          position: relative;
+          float: left;
+          margin-top: 8px;
+          margin-left: 4px;
+          input {
+              margin-top: 6px;
+              margin-right: 9px;
+          }
+          label {
+              font-size: 11px;
+              cursor: pointer;
+          }
+      }
   }
 }
 .gray-cont.sale-page {
@@ -1919,6 +2001,7 @@ footer {
 }
 .left-t {
     @include span-columns(2,10);
+    width: 211px;
     margin-top: 23px;
     .left-t-cont {
         border: 1px solid $light-gray;
@@ -2069,6 +2152,15 @@ footer {
       }
     }
   }
+  .redact-u {
+    @include medium-button;
+    height: 30px;
+    padding-bottom: 3px;
+    width: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-top: 20px;
+  }
 }
 .center-t {
   h3 {
@@ -2081,6 +2173,7 @@ footer {
   }
   a { color: $s-bord; }
     @include span-columns(8 omega,10);
+    width: 885px;
     margin-top: 23px;
     .center-t-box {
       border-bottom: 1px solid $light-gray;
@@ -2574,6 +2667,39 @@ footer {
       .name-tovar { color: $s-bord; }
     }
   }
+  .comm-box {
+    label {
+      padding-bottom: 9px;
+      display: block;
+    }
+    textarea {
+      border: 1px solid $main-color;
+      width: 465px;
+      padding: 5px;
+      height: 142px;
+      resize: none;
+    }
+    button {
+      margin-left: 22px;
+      margin-top: 19px;
+      float: right;
+      @include medium-button;
+      height: 30px;
+      width: auto;
+      padding-left: 19px;
+      padding-right: 19px;
+      padding-bottom: 3px;
+    }
+    .mes-form {
+      textarea {
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+        height: 185px;
+        text-indent: 10px;
+      }
+    }
+  }
 }
 .my-points {
   h1 {
@@ -2613,6 +2739,154 @@ footer {
       .it-p {
         font-weight: bold;
         text-align: left;
+      }
+    }
+  }
+}
+.my-sett-form {
+  h1 {
+    font-size: $main-fs + 15;
+    padding-bottom: 25px;
+  }
+  h3 { padding-left: 0; }
+  .content_1 {
+    margin-left: 0;
+    .mCSB_horizontal {
+      .mCSB_container {
+        li {
+          span {
+            position: relative;
+            width: 139px;
+            height: 109px;
+            img { max-width: 100%; }
+            input {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .comm-box {
+    padding-top: 10px;
+  }
+  .box-hor-dot {
+    margin-left: 0 !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 30px !important;
+    font-size: $main-fs + 2;
+    font-family: $font-arial;
+    .left-t {
+      float: left;
+      margin-top: 0;
+      width: 290px;
+      margin-right: 23px;
+      span {
+        float: left;
+        display: block;
+      }
+      .bold-t {
+        width: 115px;
+      }
+    }
+    .righ-t {
+      float: left;
+      width: 440px;
+      margin-top: -43px;
+      h3 {
+        padding-top: 0;
+        padding-bottom: 26px;
+      }
+      span {
+        float: left;
+        display: block;
+      }
+      .bold-t {
+        width: 260px;
+      }
+    }
+    .bold-t {
+      margin-bottom: 17px;
+      font-weight: bold;
+    }
+  }
+  .catalog-tovar {
+      padding-top: 0 !important;
+      margin-top: -9px !important;
+      li {
+          width: 257px !important;
+          border-bottom: none !important;
+          margin-bottom: 0 !important;
+          .img-box {
+              margin-bottom: 18px !important;
+              img { max-width: 100%; }
+          }
+      }
+  }
+  .my-z {
+    width: 100%;
+    margin-top: -30px;
+    td {
+      padding-left: 30px;
+      padding-top: 37px;
+      padding-bottom: 35px;
+      h4 {
+        font-size: $main-fs + 2;
+        font-weight: bold;
+        padding-bottom: 23px;
+        span {
+          color: #568f26;
+          padding-left: 5px;
+        }
+      }
+      div {
+        font-size: $main-fs - 1;
+        padding-bottom: 6px;
+        span { font-weight: bold; }
+      }
+      .sostav-z {
+        padding-top: 11px;
+        font-size: $main-fs + 2;
+        font-weight: bold;
+      }
+    }
+    .td-i {
+      text-align: right;
+      padding-right: 10px;
+      vertical-align: top;
+      padding-top: 56px;
+      a { text-decoration: none; }
+      span {
+        font-weight: normal;
+      }
+      a:hover span { border-bottom: 1px solid $wh-bord; }
+      .otm-zakaz {
+        span {
+          border-bottom: 1px solid #ec0b07;
+        }
+        color: #ec0b07;
+        i {
+          @include base-i;
+          width: 5px;
+          height: 5px;
+          margin-top: 5px;
+          margin-left: 5px;
+          background-position: -25px -1256px;
+        }
+      }
+      .povt-zakaz {
+        color: $main-color;
+        span { border-bottom: 1px solid $main-color; }
+        i {
+          @include base-i;
+          width: 7px;
+          height: 8px;
+          margin-top: 3px;
+          margin-left: 5px;
+          background-position: -31px -1256px;
+        }
       }
     }
   }
@@ -3111,7 +3385,6 @@ footer {
     td {
         padding-right: 10px;
     }
-    .gray-td { background: #f9f9f9; }
     .tov-img {
         width: 100px;
         padding-right: 19px;
@@ -3156,4 +3429,5 @@ footer {
         background-position: -38px -1241px;
     }
 }
+
 

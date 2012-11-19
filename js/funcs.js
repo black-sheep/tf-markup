@@ -50,8 +50,6 @@ $(document).ready(function()
     var ww = $('.slides_container').width();
     $('.slide').width(ww);
     var wrap = $(window).width();
-    if (wrap<($('body').data('ws'))) { $('body').addClass('small-nav'); }
-    else { $('body').removeClass('small-nav'); }
     var wpp = $('.popup-form').width();
     var hrap = $(window).height();
     var hpp = $('.popup-form').height();
@@ -84,8 +82,6 @@ $(document).ready(function()
         var hsl =  $('.slide').height();
         $('.slides_control').height(hsl);
         var wrap = $(window).width();
-        if (wrap<($('body').data('ws'))) { $('body').addClass('small-nav'); }
-        else { $('body').removeClass('small-nav'); }
         var wpp = $('.popup-form').width();
         var hrap = $(window).height();
         var hpp = $('.popup-form').height();

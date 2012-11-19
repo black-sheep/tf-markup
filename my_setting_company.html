@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Furnish Настройки</title>
+    <title>Furnish Настройки.Компания</title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -298,99 +298,166 @@
 </div>
 </header>
 <div class="wrapper">
-<div class="box-hor-dot">
+<div class="box-no-dot">
 <div class="left-t">
     <div class="left-t-cont my-points">
         <ul>
-            <li><a href="#">Обо мне</a></li>
-            <li><a href="#">Список желаний</a></li>
-            <li><a href="#">Мои баллы</a></li>
-            <li><a href="#">Мои заказы</a></li>
-            <li><a href="#">Мой блог</a></li>
-            <li><a href="#">Любимые дизайнеры</a></li>
-            <li><a href="#">Личные данные</a></li>
+            <li><a href="#">Данные компании</a></li>
             <li><a href="#">Сменить пароль/email</a></li>
         </ul>
     </div>
 </div>
 <div class="center-t gray-cont">
-    <div class="my-sett">
+    <div class="my-sett my-sett-company">
         <h1>Настройки</h1>
-        <h3>Личные данные</h3>
         <div>
-            <div class="box-img">
-                <img src="images/content/st1.jpg" alt="" />
-            </div>
-            <div class="load-file">
-                <label>Загрузить фотографии</label>
-                <div>
+            <div class="left-t">
+                <h3>Контактные данные</h3>
+                <div class="box-sel">
+                    <label>Фамилия:</label>
                     <input type="text" />
-                    <button>Обзор</button>
-                    <button class="blue-btn">Загрузить</button>
+                </div>
+                <div class="box-sel">
+                    <label>Имя:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Отчество:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Телефон:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="righ-t">
+                <div class="dop-param">
+                    <h3>Почтовый адрес</h3>
+                    <div class="dop-i">
+                        <input type="checkbox" id="ch2" />
+                        <label for="ch2">Совпадает<br />с фактическим</label>
+                    </div>
+                </div>
+                <div class="box-sel">
+                    <label>Индекс:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Город:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Адрес:</label>
+                    <input type="text" />
                 </div>
             </div>
         </div>
         <div>
             <div class="left-t">
+                <h3>Фактический адрес:</h3>
                 <div class="box-sel">
-                    <label>ФИО</label>
+                    <label>Индекс:</label>
                     <input type="text" />
                 </div>
                 <div class="box-sel">
-                    <label>Любимый стиль</label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="box-sel">
-                    <label>Телефон</label>
+                    <label>Город:</label>
                     <input type="text" />
                 </div>
                 <div class="box-sel">
-                    <label>Адрес доставки</label>
+                    <label>Адрес:</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="righ-t">
+                <div class="dop-param">
+                    <h3>Юридический адрес</h3>
                     <div class="dop-i">
-                        <input type="checkbox" id="ch1" />
-                        <label for="ch1">Основной</label>
+                        <input type="checkbox" id="ch3" />
+                        <label for="ch3">Совпадает<br />с фактическим</label>
                     </div>
+                </div>
+                <div class="box-sel">
+                    <label>Индекс:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Город:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Адрес:</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+        <div class="type-user">
+            <span>Тип пользователя:</span>
+            <input type="radio" id="r1" /><label for="r1">Юридическое лицо</label>
+            <input type="radio" id="r2" /><label for="r2">ИП</label>
+        </div>
+        <div>
+            <div class="left-t">
+                <div class="box-sel">
+                    <label>Наименование компании</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Руководитель организации:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Главный бухгалтер:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>ОГРН:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>БИК:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Корреспондентский счёт:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Лицензии:</label>
                     <input type="text" />
                 </div>
             </div>
             <div class="righ-t">
                 <div class="box-sel">
-                    <label>Индекс</label>
+                    <label>Форма собственности</label>
                     <input type="text" />
                 </div>
                 <div class="box-sel">
-                    <label>Город</label>
+                    <label>Должность руководителя:</label>
                     <input type="text" />
                 </div>
                 <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch2" />
-                        <label for="ch2">Основной</label>
-                    </div>
+                    <label>ИНН</label>
                     <input type="text" />
                 </div>
                 <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch3" />
-                        <label for="ch3">Основной</label>
-                    </div>
+                    <label>КПП:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Название банка:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Расчетный счёт:</label>
+                    <input type="text" />
+                </div>
+                <div class="box-sel">
+                    <label>Разрешения:</label>
                     <input type="text" />
                 </div>
             </div>
         </div>
-        <div class="comm-box">
-            <label>Комментарий</label>
-            <textarea></textarea>
-            <button class="blue-btn right-btn">Сохранить</button>
-        </div>
+        <button class="blue-btn">Сохранить</button>
     </div>
 </div>
 </div>

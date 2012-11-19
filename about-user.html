@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Furnish Настройки</title>
+    <title>Furnish Обо мне</title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -292,105 +292,136 @@
         <ul>
             <li><a href="#">Главная</a><i></i></li>
             <li><a href="#">Личный кабинет</a><i></i></li>
-            <li><a href="#">Настройки</a></li>
+            <li><a href="#">Обо мне</a></li>
         </ul>
     </div>
 </div>
 </header>
 <div class="wrapper">
-<div class="box-hor-dot">
+<div class="box-no-dot">
 <div class="left-t">
     <div class="left-t-cont my-points">
         <ul>
-            <li><a href="#">Обо мне</a></li>
+            <li class="active"><a href="#">Обо мне</a><i></i></li>
             <li><a href="#">Список желаний</a></li>
             <li><a href="#">Мои баллы</a></li>
             <li><a href="#">Мои заказы</a></li>
             <li><a href="#">Мой блог</a></li>
             <li><a href="#">Любимые дизайнеры</a></li>
-            <li><a href="#">Личные данные</a></li>
-            <li><a href="#">Сменить пароль/email</a></li>
         </ul>
     </div>
+    <div class="alcenter">
+        <button class="blue-btn redact-u">Редактировать профиль</button>
+    </div>
 </div>
-<div class="center-t gray-cont">
-    <div class="my-sett">
-        <h1>Настройки</h1>
-        <h3>Личные данные</h3>
-        <div>
-            <div class="box-img">
-                <img src="images/content/st1.jpg" alt="" />
+<div class="center-t my-sett-form">
+    <h1>обо мне</h1>
+    <div class="box-hor-dot">
+        <div class="left-t">
+            <div>
+                <span class="bold-t">Имя:</span>
+                <span>Сергей Кузнецов</span>
             </div>
-            <div class="load-file">
-                <label>Загрузить фотографии</label>
-                <div>
-                    <input type="text" />
-                    <button>Обзор</button>
-                    <button class="blue-btn">Загрузить</button>
-                </div>
+            <div>
+                <span class="bold-t">Пол:</span>
+                <span>мужской</span>
             </div>
-        </div>
-        <div>
-            <div class="left-t">
-                <div class="box-sel">
-                    <label>ФИО</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Любимый стиль</label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="box-sel">
-                    <label>Телефон</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch1" />
-                        <label for="ch1">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
+            <div>
+                <span class="bold-t">Вкус:</span>
+                <span>Модерн, Этника</span>
             </div>
-            <div class="righ-t">
-                <div class="box-sel">
-                    <label>Индекс</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Город</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch2" />
-                        <label for="ch2">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch3" />
-                        <label for="ch3">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
+            <div>
+                <span class="bold-t">Профессия:</span>
+                <span>Дизайнер</span>
             </div>
         </div>
-        <div class="comm-box">
-            <label>Комментарий</label>
-            <textarea></textarea>
-            <button class="blue-btn right-btn">Сохранить</button>
+        <div class="righ-t">
+            <h3>мои баллы</h3>
+            <div>
+                <span class="bold-t">Приглашения (реализованные):</span>
+                <span>Сергей Кузнецов</span>
+            </div>
+            <div>
+                <span class="bold-t">Баллы начисленные</span>
+                <span>250</span>
+            </div>
+            <div>
+                <span class="bold-t">Использовано:</span>
+                <span>0</span>
+            </div>
+            <div>
+                <a href="#">Подробнее</a>
+            </div>
         </div>
+    </div>
+    <h3>список желаний</h3>
+    <div class="scroll-pane content_1">
+        <ul>
+            <li>
+                <span>
+                    <img src="images/content/u1.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u2.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u3.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u4.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u2.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u1.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u4.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+            <li>
+                <span>
+                    <img src="images/content/u2.jpg" alt="" />
+                    <input type="checkbox" checked />
+                </span>
+                <a href="#">Диван кожаный черно-синий</a>
+                <span class="price">2 940 Р</span>
+            </li>
+        </ul>
     </div>
 </div>
 </div>

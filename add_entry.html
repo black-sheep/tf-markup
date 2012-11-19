@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Furnish Настройки</title>
+    <title>Furnish Добавить запись</title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -292,105 +292,49 @@
         <ul>
             <li><a href="#">Главная</a><i></i></li>
             <li><a href="#">Личный кабинет</a><i></i></li>
-            <li><a href="#">Настройки</a></li>
+            <li><a href="#">Мои заказы</a></li>
         </ul>
     </div>
 </div>
 </header>
 <div class="wrapper">
-<div class="box-hor-dot">
+<div class="box-no-dot">
 <div class="left-t">
     <div class="left-t-cont my-points">
         <ul>
             <li><a href="#">Обо мне</a></li>
             <li><a href="#">Список желаний</a></li>
             <li><a href="#">Мои баллы</a></li>
-            <li><a href="#">Мои заказы</a></li>
+            <li class="active"><a href="#">Мои заказы</a><i></i></li>
             <li><a href="#">Мой блог</a></li>
             <li><a href="#">Любимые дизайнеры</a></li>
-            <li><a href="#">Личные данные</a></li>
-            <li><a href="#">Сменить пароль/email</a></li>
         </ul>
     </div>
 </div>
-<div class="center-t gray-cont">
-    <div class="my-sett">
-        <h1>Настройки</h1>
-        <h3>Личные данные</h3>
-        <div>
-            <div class="box-img">
-                <img src="images/content/st1.jpg" alt="" />
+<div class="center-t my-sett-form">
+    <h1>Добавить запись</h1>
+    <div class="box-sel">
+        <label>Заголовок:</label>
+        <input type="text" />
+    </div>
+    <div class="comm-box">
+        <label>Запись:</label>
+        <div class="mes-form">
+            <div class="last">
+                <ul>
+                    <li class="vern"><a href="#"></a></li>
+                    <li class="i-bold"><a href="#"></a></li>
+                    <li class="i-ital"><a href="#"></a></li>
+                    <li class="i-list"><a href="#"></a></li>
+                    <li class="i-link"><a href="#"></a></li>
+                    <li class="i-img"><a href="#"></a></li>
+                    <li class="i-mov last"><a href="#"></a></li>
+                </ul>
             </div>
-            <div class="load-file">
-                <label>Загрузить фотографии</label>
-                <div>
-                    <input type="text" />
-                    <button>Обзор</button>
-                    <button class="blue-btn">Загрузить</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="left-t">
-                <div class="box-sel">
-                    <label>ФИО</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Любимый стиль</label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="box-sel">
-                    <label>Телефон</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch1" />
-                        <label for="ch1">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="righ-t">
-                <div class="box-sel">
-                    <label>Индекс</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Город</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch2" />
-                        <label for="ch2">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch3" />
-                        <label for="ch3">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-            </div>
-        </div>
-        <div class="comm-box">
-            <label>Комментарий</label>
             <textarea></textarea>
-            <button class="blue-btn right-btn">Сохранить</button>
         </div>
+        <button class="right-btn">Опубликовать</button>
+        <button class="red-btn right-btn">Удалить</button>
     </div>
 </div>
 </div>

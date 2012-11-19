@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Furnish Настройки</title>
+    <title>Furnish Мои заказы</title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -292,7 +292,7 @@
         <ul>
             <li><a href="#">Главная</a><i></i></li>
             <li><a href="#">Личный кабинет</a><i></i></li>
-            <li><a href="#">Настройки</a></li>
+            <li><a href="#">Мои заказы</a></li>
         </ul>
     </div>
 </div>
@@ -305,93 +305,66 @@
             <li><a href="#">Обо мне</a></li>
             <li><a href="#">Список желаний</a></li>
             <li><a href="#">Мои баллы</a></li>
-            <li><a href="#">Мои заказы</a></li>
+            <li class="active"><a href="#">Мои заказы</a><i></i></li>
             <li><a href="#">Мой блог</a></li>
             <li><a href="#">Любимые дизайнеры</a></li>
-            <li><a href="#">Личные данные</a></li>
-            <li><a href="#">Сменить пароль/email</a></li>
         </ul>
     </div>
 </div>
-<div class="center-t gray-cont">
-    <div class="my-sett">
-        <h1>Настройки</h1>
-        <h3>Личные данные</h3>
-        <div>
-            <div class="box-img">
-                <img src="images/content/st1.jpg" alt="" />
-            </div>
-            <div class="load-file">
-                <label>Загрузить фотографии</label>
-                <div>
-                    <input type="text" />
-                    <button>Обзор</button>
-                    <button class="blue-btn">Загрузить</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="left-t">
-                <div class="box-sel">
-                    <label>ФИО</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Любимый стиль</label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="box-sel">
-                    <label>Телефон</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch1" />
-                        <label for="ch1">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="righ-t">
-                <div class="box-sel">
-                    <label>Индекс</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Город</label>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch2" />
-                        <label for="ch2">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-                <div class="box-sel">
-                    <label>Адрес доставки</label>
-                    <div class="dop-i">
-                        <input type="checkbox" id="ch3" />
-                        <label for="ch3">Основной</label>
-                    </div>
-                    <input type="text" />
-                </div>
-            </div>
-        </div>
-        <div class="comm-box">
-            <label>Комментарий</label>
-            <textarea></textarea>
-            <button class="blue-btn right-btn">Сохранить</button>
-        </div>
-    </div>
+<div class="center-t my-sett-form">
+    <h1>Мои заказы</h1>
+    <table class="my-z">
+        <tbody>
+        <tr>
+            <td>
+                <h4>Заказ №7 от 10.04.2013 17:34:59  <span>Принят, ожидается оплата</span></h4>
+                <div>Сумма к оплате: <span>11 900 Р</span></div>
+                <div>Оплачен: Нет</div>
+                <div>Способ оплаты: Пластиковая карта</div>
+                <div>Доставка: Курьер Сервис Экпресс</div>
+                <div class="sostav-z">Состав заказа:</div>
+                <div><a href="#">Серьги "Итомида" со стразами Сваровски (Swarovski) Crystal&Peridot , 3 шт.</a></div>
+                <div><a href="#">Серьги "Итомида" со стразами Сваровски (Swarovski) Crystal&Peridot , 3 шт</a></div>
+            </td>
+            <td class="td-i">
+                <div><a class="otm-zakaz" href="#"><span>Отменить заказ</span><i></i></a></div>
+                <div><a class="povt-zakaz" href="#"><span>Повторить заказ</span><i></i></a></div>
+            </td>
+        </tr>
+        <tr class="gray-td">
+            <td>
+                <h4>Заказ №7 от 10.04.2013 17:34:59  <span>Принят, ожидается оплата</span></h4>
+                <div>Сумма к оплате: <span>11 900 Р</span></div>
+                <div>Оплачен: Нет</div>
+                <div>Способ оплаты: Пластиковая карта</div>
+                <div>Доставка: Курьер Сервис Экпресс</div>
+                <div class="sostav-z">Состав заказа:</div>
+                <div><a href="#">Серьги "Итомида" со стразами Сваровски (Swarovski) Crystal&Peridot , 3 шт.</a></div>
+                <div><a href="#">Серьги "Итомида" со стразами Сваровски (Swarovski) Crystal&Peridot , 3 шт</a></div>
+            </td>
+            <td class="td-i">
+                <div><a class="otm-zakaz" href="#"><span>Отменить заказ</span><i></i></a></div>
+                <div><a class="povt-zakaz" href="#"><span>Повторить заказ</span><i></i></a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Заказ №7 от 10.04.2013 17:34:59  <span>Принят, ожидается оплата</span></h4>
+                <div>Сумма к оплате: <span>11 900 Р</span></div>
+                <div>Оплачен: Нет</div>
+                <div>Способ оплаты: Пластиковая карта</div>
+                <div>Доставка: Курьер Сервис Экпресс</div>
+                <div class="sostav-z">Состав заказа:</div>
+                <div><a href="#">Серьги "Итомида" со стразами Сваровски (Swarovski) Crystal&Peridot , 3 шт.</a></div>
+                <div><a href="#">Серьги "Итомида" со стразами Сваровски (Swarovski) Crystal&Peridot , 3 шт</a></div>
+            </td>
+            <td class="td-i">
+                <div><a class="otm-zakaz" href="#"><span>Отменить заказ</span><i></i></a></div>
+                <div><a class="povt-zakaz" href="#"><span>Повторить заказ</span><i></i></a></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </div>
 </div>
