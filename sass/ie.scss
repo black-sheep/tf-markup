@@ -4,5 +4,114 @@
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
 
+@import "compass/css3/pie";
+
 $font-i: 'PT Sans Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif;
 $font-medium: 'PT Sans Narrow', 'Arial Narrow', Arial, Helvetica, sans-serif;
+
+button {
+    behavior: url('js/PIE.htc');
+    position: relative;
+}
+.main-head {
+    .alleft {
+        .dop-menu {
+            li {
+                a {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.main-menu {
+    li {
+        a {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .hidden-ul {
+        .hide-ul {
+            w0dth: 960px;
+            border: 1px solid #898888;
+            a {
+                font-weight: normal;
+                font-size: 13px;
+            }
+        }
+    }
+}
+.pages {
+    li { behavior: url('js/PIE.htc'); }
+}
+.center-t {
+    .content_1 {
+        .mCSB_horizontal {
+            .mCSB_scrollTools {
+                .mCSB_draggerContainer {
+                    .mCSB_draggerRail { behavior: url('js/PIE.htc'); }
+                }
+            }
+        }
+    }
+    .carousel {
+        .panel {
+            .details_wrapper {
+                .detail {
+                    h2 { font-size: 35px; }
+                }
+            }
+        }
+    }
+}
+.center-t.gray-cont {
+    .my-sett {
+        width: 520px;
+        .dop-i {
+            input {
+                margin: 0 4px 0 0 !important;
+                border: none !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+        }
+         .left-t {
+            width: 232px;
+            margin-right: 16px;
+        }
+        .righ-t {
+            width: 270px !important;
+            input { width: 232px; }
+            .dop-i {
+                input {
+                    width: auto;
+                    margin: 6px 0 0 4px !important;
+                }
+            }
+            .box-sel {
+                .dop-i {
+                    margin-right: 40px;
+                    input {
+                        margin: 2px 0 0 4px !important;
+                    }
+                }
+            }
+        }
+        .comm-box {
+            .blue-btn { margin-right: 40px; }
+        }
+    }
+    .my-sett-company.my-sett {
+        button { margin-right: 40px; }
+    }
+}   
+.overlay { filter: alpha(opacity=30); }
+.jcarousel-next-disabled-horizontal, .jcarousel-prev-disabled-horizontal { filter: alpha(opacity=50); }
+.vv-box.ww-small { filter: alpha(opacity=0); }
+.vv-box {
+    filter: alpha(opacity=100);
+    border: 1px solid #d8d8d8;
+}
+

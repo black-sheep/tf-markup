@@ -1601,6 +1601,7 @@ footer {
                     font-family: $font-arial;
                     color: $s-bord;
                     width: 80%;
+                    white-space: nowrap;
                 }
             }
         }
@@ -1611,9 +1612,9 @@ footer {
                     float: left;
                     width: auto;
                     margin: 0 4px 0 0 !important;
-                  border: none !important;
-                  padding-top: 0 !important;
-                  padding-bottom: 0 !important;
+                    border: none !important;
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
 
                 }
                 span { float: left; }
@@ -2229,7 +2230,7 @@ footer {
             cursor: pointer;
             background-position: -27px -1009px;
           }
-          .jcarousel-next-disabled-horizontal, .jcarousel-prev-disabled-horizontal { cursor: default !important; opacity: 0.5; filter: alpha(opacity=50); }
+          .jcarousel-next-disabled-horizontal, .jcarousel-prev-disabled-horizontal { cursor: default !important; opacity: 0.5; }
         }
         .slide-small-board {
           margin-top: 10px;
@@ -2563,7 +2564,7 @@ footer {
     padding-top: 9px;
     li {
       display: inline-block;
-      margin-right: 26px;
+      margin-right: 25px;
       padding-bottom: 29px;
       margin-top: 10px;
       width: 267px;
@@ -2890,6 +2891,54 @@ footer {
       }
     }
   }
+  .base-info {
+      height: 231px;
+      img { width: auto; }
+      h3 {
+            padding-top: 0;
+            padding-bottom: 14px;
+            padding-right: 0;
+            a {
+                @extend .purple-board;
+                font-size: 20px;
+                 line-height: 25px;
+            }
+            a:hover { color: $main-color; }
+        }
+        p {
+            line-height: 18px;
+            padding-bottom: 18px;
+        }
+  }
+  .big-box {
+      width: 469px;
+      float: left;
+      margin-right: 20px;
+      img {
+          float: left;
+          margin-right: 20px;
+          margin-bottom: 1px;
+      }
+  }
+  .small-box {
+      width: 306px;
+      float: left;
+      margin-right: 20px;
+      h3 { padding-top: 15px; }
+  }
+  .h-fl-btn {
+      h1 { float: left; }
+      button {
+          float: left;
+          @include medium-button;
+          height: 30px;
+          padding-bottom: 3px;
+          width: auto;
+          padding-left: 14px;
+          padding-right: 14px;
+          margin-left: 38px;
+      }
+  }
 }
 
 .vv-box.ww-small {
@@ -2916,6 +2965,7 @@ footer {
     position: absolute;
     top: -12px;
     right: 95px;
+    z-index: 1000;
   }
   .vv-head {
     span {
